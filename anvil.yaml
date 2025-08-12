@@ -1,0 +1,1448 @@
+allow_embedding: false
+correct_dependency_ids: {dep_l6meudozssm7aq: C6ZZPAPN4YYF5NVJ}
+db_schema:
+  address:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: paddle_id
+      type: string
+    - admin_ui: {width: 200}
+      name: status
+      type: string
+    - admin_ui: {width: 200}
+      name: description
+      type: string
+    - admin_ui: {width: 200}
+      name: first_line
+      type: string
+    - admin_ui: {width: 200}
+      name: second_line
+      type: string
+    - admin_ui: {width: 200}
+      name: city
+      type: string
+    - admin_ui: {width: 200}
+      name: postal_code
+      type: string
+    - admin_ui: {width: 200}
+      name: region
+      type: string
+    - admin_ui: {width: 200}
+      name: country_code
+      type: string
+    - admin_ui: {width: 200}
+      name: customer_id
+      target: customer
+      type: link_single
+    - admin_ui: {width: 200}
+      name: created_at_paddle
+      type: datetime
+    - admin_ui: {width: 200}
+      name: updated_at_paddle
+      type: datetime
+    - admin_ui: {width: 200}
+      name: created_at_anvil
+      type: datetime
+    - admin_ui: {width: 200}
+      name: updated_at_anvil
+      type: datetime
+    server: full
+    title: address
+  app_settings:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: setting_id
+      type: string
+    - admin_ui: {width: 200}
+      name: setting_name
+      type: string
+    - admin_ui: {width: 200}
+      name: value_text
+      type: string
+    - admin_ui: {width: 200}
+      name: value_number
+      type: number
+    - admin_ui: {width: 200}
+      name: value_bool
+      type: bool
+    - admin_ui: {width: 200}
+      name: currency_country
+      type: string
+    server: full
+    title: app_settings
+  business:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: paddle_id
+      type: string
+    - admin_ui: {width: 200}
+      name: name
+      type: string
+    - admin_ui: {width: 200}
+      name: company_number
+      type: string
+    - admin_ui: {width: 200}
+      name: tax_identifier
+      type: string
+    - admin_ui: {width: 200}
+      name: status
+      type: string
+    - admin_ui: {width: 200}
+      name: customer_id
+      target: customer
+      type: link_single
+    - admin_ui: {width: 200}
+      name: created_at_paddle
+      type: datetime
+    - admin_ui: {width: 200}
+      name: updated_at_paddle
+      type: datetime
+    - admin_ui: {width: 200}
+      name: created_at_anvil
+      type: datetime
+    - admin_ui: {width: 200}
+      name: updated_at_anvil
+      type: datetime
+    server: full
+    title: business
+  country:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: country_id
+      type: string
+    - admin_ui: {width: 200}
+      name: country_name
+      type: string
+    - admin_ui: {width: 200}
+      name: country_code
+      type: string
+    server: full
+    title: country
+  currency:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: currency
+      type: string
+    - admin_ui: {width: 200}
+      name: country
+      type: string
+    - admin_ui: {width: 200}
+      name: is_system
+      type: bool
+    server: full
+    title: currency
+  customer:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: customer_id
+      type: string
+    - admin_ui: {width: 200}
+      name: user_id
+      target: users
+      type: link_single
+    - admin_ui: {width: 200}
+      name: full_name
+      type: string
+    - admin_ui: {width: 200}
+      name: country
+      type: string
+    - admin_ui: {width: 200}
+      name: email
+      type: string
+    - admin_ui: {width: 200}
+      name: first_name
+      type: string
+    - admin_ui: {width: 200}
+      name: last_name
+      type: string
+    - admin_ui: {width: 200}
+      name: status
+      type: string
+    - admin_ui: {width: 200}
+      name: marketing_consent
+      type: bool
+    - admin_ui: {width: 200}
+      name: locale
+      type: string
+    - admin_ui: {width: 200}
+      name: custom_data
+      type: simpleObject
+    - admin_ui: {width: 200}
+      name: ' paddle_created_at'
+      type: datetime
+    - admin_ui: {width: 200}
+      name: paddle_updated_at
+      type: datetime
+    - admin_ui: {width: 200}
+      name: paddle_id
+      type: string
+    server: full
+    title: customer
+  customer_subscriptions:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: paddle_subscription_id
+      type: string
+    - admin_ui: {width: 200}
+      name: status
+      type: string
+    - admin_ui: {width: 200}
+      name: anvil_user_id
+      target: users
+      type: link_single
+    - admin_ui: {width: 200}
+      name: paddle_customer_id
+      type: string
+    - admin_ui: {width: 200}
+      name: mybizz_price_id
+      target: prices
+      type: link_single
+    - admin_ui: {width: 200}
+      name: paddle_price_id
+      type: string
+    - admin_ui: {width: 200}
+      name: paddle_product_id
+      type: string
+    - admin_ui: {width: 200}
+      name: currency_code
+      type: string
+    - admin_ui: {width: 200}
+      name: billing_cycle_interval
+      type: string
+    - admin_ui: {width: 200}
+      name: billing_cycle_frequency
+      type: number
+    - admin_ui: {width: 200}
+      name: current_billing_period_starts_at
+      type: datetime
+    - admin_ui: {width: 200}
+      name: current_billing_period_ends_at
+      type: datetime
+    - admin_ui: {width: 200}
+      name: next_billed_at
+      type: datetime
+    - admin_ui: {width: 200}
+      name: paused_at
+      type: datetime
+    - admin_ui: {width: 200}
+      name: canceled_at
+      type: datetime
+    - admin_ui: {width: 200}
+      name: scheduled_change_action
+      type: string
+    - admin_ui: {width: 200}
+      name: scheduled_change_effective_at
+      type: datetime
+    - admin_ui: {width: 200}
+      name: custom_data_paddle
+      type: simpleObject
+    - admin_ui: {width: 200}
+      name: management_urls
+      type: simpleObject
+    - admin_ui: {width: 200}
+      name: created_at_paddle
+      type: datetime
+    - admin_ui: {width: 200}
+      name: updated_at_paddle
+      type: datetime
+    - admin_ui: {width: 200}
+      name: created_at_anvil
+      type: datetime
+    - admin_ui: {width: 200}
+      name: updated_at_anvil
+      type: datetime
+    server: full
+    title: customer_subscriptions
+  discount:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: discount_id
+      type: string
+    - admin_ui: {width: 200}
+      name: discount_name
+      type: string
+    - admin_ui: {width: 200}
+      name: coupon_code
+      type: string
+    - admin_ui: {width: 200}
+      name: type
+      type: string
+    - admin_ui: {width: 200}
+      name: description
+      type: string
+    - admin_ui: {width: 200}
+      name: status
+      type: string
+    - admin_ui: {width: 200}
+      name: usage_limit
+      type: number
+    - admin_ui: {width: 200}
+      name: times_used
+      type: number
+    - admin_ui: {width: 200}
+      name: ' duration_type'
+      type: string
+    - admin_ui: {width: 200}
+      name: ' duration_in_months'
+      type: number
+    - admin_ui: {width: 200}
+      name: ' currency_restrictions'
+      type: simpleObject
+    - admin_ui: {width: 200}
+      name: 'location_restrictions '
+      type: simpleObject
+    - admin_ui: {width: 200}
+      name: custom_data
+      type: simpleObject
+    - admin_ui: {width: 200}
+      name: 'paddle_created_at '
+      type: datetime
+    - admin_ui: {width: 200}
+      name: 'paddle_updated_at '
+      type: datetime
+    - admin_ui: {width: 200}
+      name: paddle_id
+      type: string
+    - admin_ui: {width: 200}
+      name: amount_type
+      type: string
+    - admin_ui: {width: 200}
+      name: amount_rate
+      type: string
+    - admin_ui: {width: 200}
+      name: amount_amount
+      type: string
+    - admin_ui: {width: 200}
+      name: amount_currency_code
+      type: string
+    - admin_ui: {width: 200}
+      name: expires_at
+      type: datetime
+    - admin_ui: {width: 200}
+      name: created_at_anvil
+      type: datetime
+    - admin_ui: {width: 200}
+      name: updated_at_anvil
+      type: datetime
+    - admin_ui: {width: 200}
+      name: target_item_id
+      target: items
+      type: link_single
+    server: full
+    title: discount
+  discount_applicability:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: id
+      type: string
+    - admin_ui: {width: 200}
+      name: 'discount_id '
+      target: discount
+      type: link_single
+    - admin_ui: {width: 200}
+      name: ' entity_type '
+      type: string
+    - admin_ui: {width: 200}
+      name: entity_id
+      type: string
+    - admin_ui: {width: 200}
+      name: ' created_at_anvil '
+      type: datetime
+    - admin_ui: {width: 200}
+      name: ' updated_at_anvil'
+      type: datetime
+    server: full
+    title: discount_applicability
+  failed_transactions:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: failed_tranaction_id
+      type: string
+    - admin_ui: {width: 200}
+      name: email
+      type: string
+    - admin_ui: {width: 200}
+      name: first_name
+      type: string
+    - admin_ui: {width: 200}
+      name: last_name
+      type: string
+    - admin_ui: {width: 200}
+      name: paddle_transaction_id
+      type: string
+    - admin_ui: {width: 200}
+      name: paddle_customer_id
+      type: string
+    - admin_ui: {width: 200}
+      name: paddle_checkout_id
+      type: string
+    - admin_ui: {width: 200}
+      name: failure_reason_paddle
+      type: string
+    - admin_ui: {width: 200}
+      name: failure_reason_mybizz
+      type: string
+    - admin_ui: {width: 200}
+      name: failed_at
+      type: datetime
+    - admin_ui: {width: 200}
+      name: attempted_items_summary
+      type: string
+    - admin_ui: {width: 200}
+      name: status
+      type: string
+    - admin_ui: {width: 200}
+      name: notes
+      type: string
+    - admin_ui: {width: 200}
+      name: created_at_anvil
+      type: datetime
+    server: full
+    title: failed_transactions
+  files:
+    client: none
+    columns:
+    - admin_ui: {width: 322}
+      name: file
+      type: media
+    - admin_ui: {width: 200}
+      name: created_at
+      type: datetime
+    - admin_ui: {width: 200}
+      name: img_url
+      type: string
+    - admin_ui: {width: 200}
+      name: name
+      type: string
+    - admin_ui: {width: 200}
+      name: size
+      type: number
+    - admin_ui: {width: 200}
+      name: file_type
+      type: string
+    - admin_ui: {width: 200}
+      name: zone
+      type: string
+    server: full
+    title: files
+  items:
+    client: none
+    columns:
+    - admin_ui: {width: 102}
+      name: item_id
+      type: string
+    - admin_ui: {width: 134}
+      name: name
+      type: string
+    - admin_ui: {width: 200}
+      name: description
+      type: string
+    - admin_ui: {width: 140}
+      name: created_at_paddle
+      type: datetime
+    - admin_ui: {width: 140}
+      name: updated_at_paddle
+      type: datetime
+    - admin_ui: {width: 121}
+      name: created_at_anvil
+      type: datetime
+    - admin_ui: {width: 129}
+      name: updated_at_anvil
+      type: datetime
+    - admin_ui: {width: 120}
+      name: raw_payload
+      type: simpleObject
+    - admin_ui: {width: 77}
+      name: media
+      target: files
+      type: link_single
+    - admin_ui: {width: 200}
+      name: image_url
+      type: string
+    - admin_ui: {width: 200}
+      name: custom_data
+      type: simpleObject
+    - admin_ui: {width: 200}
+      name: subscription_group_id
+      target: subscription_group
+      type: link_single
+    - admin_ui: {width: 200}
+      name: item_type
+      type: string
+    - admin_ui: {width: 200}
+      name: glt
+      type: string
+    - admin_ui: {width: 200}
+      name: paddle_product_id
+      type: string
+    - admin_ui: {width: 200}
+      name: default_price_id
+      target: prices
+      type: link_single
+    - admin_ui: {width: 200}
+      name: tax_category
+      type: string
+    - admin_ui: {width: 200}
+      name: status
+      type: string
+    server: full
+    title: items
+  logs:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: timestamp
+      type: datetime
+    - admin_ui: {width: 200}
+      name: level
+      type: string
+    - admin_ui: {width: 200}
+      name: module
+      type: string
+    - admin_ui: {width: 200}
+      name: process
+      type: string
+    - admin_ui: {width: 200}
+      name: message
+      type: string
+    - admin_ui: {width: 200}
+      name: context
+      type: string
+    - admin_ui: {width: 200}
+      name: concatenated
+      type: string
+    server: full
+    title: logs
+  pending_users:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: pending_user_id
+      type: string
+    - admin_ui: {width: 200}
+      name: email
+      type: string
+    - admin_ui: {width: 200}
+      name: first_name
+      type: string
+    - admin_ui: {width: 200}
+      name: last_name
+      type: string
+    - admin_ui: {width: 200}
+      name: created_at
+      type: datetime
+    - admin_ui: {width: 200}
+      name: status
+      type: string
+    server: full
+    title: pending_users
+  permissions:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: permission_id
+      type: string
+    - admin_ui: {width: 200}
+      name: description
+      type: string
+    - admin_ui: {width: 200}
+      name: name
+      type: string
+    - admin_ui: {width: 200}
+      name: category
+      type: string
+    - admin_ui: {width: 200}
+      name: updated_at_anvil
+      type: datetime
+    - admin_ui: {width: 200}
+      name: created_at_anvil
+      type: datetime
+    server: full
+    title: permissions
+  price_unit_price_overrides:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: 'price_id '
+      target: prices
+      type: link_single
+    - admin_ui: {width: 200}
+      name: currency_code
+      type: string
+    - admin_ui: {width: 200}
+      name: created_at_anvil
+      type: datetime
+    - admin_ui: {width: 200}
+      name: 'updated_at_anvil '
+      type: datetime
+    - admin_ui: {width: 200}
+      name: amount
+      type: string
+    - admin_ui: {width: 200}
+      name: id
+      type: string
+    - admin_ui: {width: 200}
+      name: country_codes
+      type: simpleObject
+    server: full
+    title: price_unit_price_overrides
+  prices:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: item_id
+      target: items
+      type: link_single
+    - admin_ui: {width: 200}
+      name: description
+      type: string
+    - admin_ui: {width: 200}
+      name: 'billing_cycle_interval '
+      type: string
+    - admin_ui: {width: 200}
+      name: billing_cycle_frequency
+      type: number
+    - admin_ui: {width: 200}
+      name: trial_period_interval
+      type: string
+    - admin_ui: {width: 200}
+      name: 'trial_period_frequency '
+      type: number
+    - admin_ui: {width: 200}
+      name: tax_mode
+      type: string
+    - admin_ui: {width: 200}
+      name: 'unit_price_currency_code '
+      type: string
+    - admin_ui: {width: 200}
+      name: 'quantity_minimum '
+      type: number
+    - admin_ui: {width: 200}
+      name: 'quantity_maximum '
+      type: number
+    - admin_ui: {width: 200}
+      name: 'status '
+      type: string
+    - admin_ui: {width: 200}
+      name: 'custom_data '
+      type: simpleObject
+    - admin_ui: {width: 200}
+      name: 'paddle_created_at '
+      type: datetime
+    - admin_ui: {width: 200}
+      name: 'paddle_updated_at '
+      type: datetime
+    - admin_ui: {width: 200}
+      name: 'created_at_anvil '
+      type: datetime
+    - admin_ui: {width: 200}
+      name: 'updated_at_anvil '
+      type: datetime
+    - admin_ui: {width: 200}
+      name: unit_price_amount
+      type: string
+    - admin_ui: {width: 200}
+      name: price_type
+      type: string
+    - admin_ui: {width: 200}
+      name: paddle_price_id
+      type: string
+    - admin_ui: {width: 200}
+      name: price_id
+      type: string
+    server: full
+    title: prices
+  refund_items:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: id
+      type: string
+    - admin_ui: {width: 200}
+      name: refund_id
+      target: refunds
+      type: link_single
+    - admin_ui: {width: 200}
+      name: 'item_id '
+      target: transaction_items
+      type: link_single
+    - admin_ui: {width: 200}
+      name: created_at_anvil
+      type: datetime
+    - admin_ui: {width: 200}
+      name: updated_at_anvil
+      type: datetime
+    - admin_ui: {width: 200}
+      name: amount
+      type: string
+    server: full
+    title: refund_items
+  refunds:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: paddle_id
+      type: string
+    - admin_ui: {width: 200}
+      name: transaction_id
+      target: transaction
+      type: link_single
+    - admin_ui: {width: 200}
+      name: reason
+      type: string
+    - admin_ui: {width: 200}
+      name: 'status '
+      type: string
+    - admin_ui: {width: 200}
+      name: 'currency_code '
+      type: string
+    - admin_ui: {width: 200}
+      name: 'customer_id '
+      target: customer
+      type: link_single
+    - admin_ui: {width: 200}
+      name: ' payment_id'
+      type: string
+    - admin_ui: {width: 200}
+      name: paddle_created_at
+      type: datetime
+    - admin_ui: {width: 200}
+      name: paddle_updated_at
+      type: datetime
+    - admin_ui: {width: 200}
+      name: created_at_anvil
+      type: datetime
+    - admin_ui: {width: 200}
+      name: updated_at_anvil
+      type: datetime
+    - admin_ui: {width: 200}
+      name: amount
+      type: string
+    server: full
+    title: refunds
+  role_permission_mapping:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: map_id
+      type: string
+    - admin_ui: {width: 200}
+      name: role_id
+      target: roles
+      type: link_single
+    - admin_ui: {order: 2, width: 200}
+      name: permission_id
+      target: permissions
+      type: link_single
+    - admin_ui: {width: 200}
+      name: assigned_at_anvil
+      type: datetime
+    server: full
+    title: role_permission_mapping
+  roles:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: role_id
+      type: string
+    - admin_ui: {width: 200}
+      name: name
+      type: string
+    - admin_ui: {width: 200}
+      name: description
+      type: string
+    - admin_ui: {width: 200}
+      name: is_system_role
+      type: bool
+    - admin_ui: {width: 200}
+      name: created_at_anvil
+      type: datetime
+    - admin_ui: {width: 200}
+      name: updated_at_anvil
+      type: datetime
+    server: full
+    title: roles
+  sessions:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: user
+      target: users
+      type: link_single
+    - admin_ui: {width: 200}
+      name: is_temp_admin
+      type: bool
+    - admin_ui: {width: 200}
+      name: created_at
+      type: datetime
+    - admin_ui: {width: 200}
+      name: exires_at
+      type: datetime
+    server: full
+    title: sessions
+  subs:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: subs_id
+      type: string
+    - admin_ui: {width: 200}
+      name: level_num
+      type: string
+    - admin_ui: {width: 200}
+      name: tier_num
+      type: string
+    - admin_ui: {width: 200}
+      name: subscription_group
+      target: subscription_group
+      type: link_single
+    - admin_ui: {width: 200}
+      name: level_name
+      type: string
+    - admin_ui: {width: 200}
+      name: tier_name
+      type: string
+    - admin_ui: {width: 200}
+      name: glt
+      type: string
+    - admin_ui: {width: 200}
+      name: created_at_anvil
+      type: datetime
+    - admin_ui: {width: 200}
+      name: updated_at_anvil
+      type: datetime
+    - admin_ui: {width: 200}
+      name: address_id
+      type: string
+    - admin_ui: {width: 200}
+      name: business_id
+      type: string
+    - admin_ui: {width: 200}
+      name: created_at_paddle
+      type: datetime
+    - admin_ui: {width: 200}
+      name: updated_at_paddle
+      type: datetime
+    - admin_ui: {width: 200}
+      name: started_at
+      type: datetime
+    - admin_ui: {width: 200}
+      name: first_billed_at
+      type: datetime
+    - admin_ui: {width: 200}
+      name: next_billed_at
+      type: datetime
+    - admin_ui: {width: 200}
+      name: paused_at
+      type: datetime
+    - admin_ui: {width: 200}
+      name: canceled_at
+      type: datetime
+    - admin_ui: {width: 200}
+      name: collection_mode
+      type: string
+    - admin_ui: {width: 200}
+      name: billing_details_payment_method_id
+      type: string
+    - admin_ui: {width: 200}
+      name: billing_details_purchase_order_number
+      type: string
+    - admin_ui: {width: 200}
+      name: billing_cycle_interval
+      type: string
+    - admin_ui: {width: 200}
+      name: billing_cycle_frequency
+      type: number
+    - admin_ui: {width: 200}
+      name: scheduled_change_action
+      type: string
+    - admin_ui: {width: 200}
+      name: 'scheduled_change_effective_at '
+      type: datetime
+    - admin_ui: {width: 200}
+      name: 'scheduled_change_resume_at '
+      type: datetime
+    - admin_ui: {width: 200}
+      name: 'custom_data '
+      type: simpleObject
+    - admin_ui: {width: 200}
+      name: management_urls_customer_portal
+      type: string
+    - admin_ui: {width: 200}
+      name: 'management_urls_update_payment_method '
+      type: string
+    - admin_ui: {width: 200}
+      name: management_urls_cancel
+      type: string
+    - admin_ui: {width: 200}
+      name: discount_id
+      target: discount
+      type: link_single
+    - admin_ui: {width: 200}
+      name: item_id
+      target: items
+      type: link_single
+    - admin_ui: {width: 200}
+      name: status
+      type: bool
+    server: full
+    title: subs
+  subscription_group:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: group_name
+      type: string
+    - admin_ui: {width: 200}
+      name: group_description
+      type: string
+    - admin_ui: {width: 200}
+      name: group_number
+      type: string
+    - admin_ui: {width: 200}
+      name: created_at_anvil
+      type: datetime
+    - admin_ui: {width: 200}
+      name: updated_at_anvil
+      type: datetime
+    - admin_ui: {width: 200}
+      name: group_level1_name
+      type: string
+    - admin_ui: {width: 200}
+      name: group_level2_name
+      type: string
+    - admin_ui: {width: 200}
+      name: group_level3_name
+      type: string
+    - admin_ui: {width: 200}
+      name: group_tier1_name
+      type: string
+    - admin_ui: {width: 200}
+      name: group_tier2_name
+      type: string
+    - admin_ui: {width: 200}
+      name: group_tier3_name
+      type: string
+    - admin_ui: {width: 200}
+      name: media
+      target: files
+      type: link_single
+    - admin_ui: {width: 200}
+      name: tax_category
+      type: string
+    server: full
+    title: subscription_group
+  subscription_items:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: sub_item_id
+      type: string
+    - admin_ui: {width: 200}
+      name: paddle_id
+      type: string
+    - admin_ui: {width: 200}
+      name: subscription_id
+      target: subs
+      type: link_single
+    - admin_ui: {width: 200}
+      name: price_id
+      target: prices
+      type: link_single
+    - admin_ui: {width: 200}
+      name: quantity
+      type: number
+    - admin_ui: {width: 200}
+      name: paddle_created_at
+      type: datetime
+    - admin_ui: {width: 200}
+      name: paddle_updated_at
+      type: datetime
+    - admin_ui: {width: 200}
+      name: created_at_anvil
+      type: datetime
+    - admin_ui: {width: 200}
+      name: updated_at_anvil
+      type: datetime
+    - admin_ui: {width: 200}
+      name: status
+      type: string
+    - admin_ui: {width: 200}
+      name: custom_data
+      type: simpleObject
+    - admin_ui: {width: 200}
+      name: proration_billing_mode
+      type: string
+    - admin_ui: {width: 200}
+      name: next_billed_at
+      type: datetime
+    server: full
+    title: subscription_items
+  tax_category_mapping:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: mybizz_sector
+      type: string
+    - admin_ui: {width: 200}
+      name: use_case_description
+      type: string
+    - admin_ui: {width: 200}
+      name: paddle_tax_category
+      type: string
+    - admin_ui: {width: 200}
+      name: notes_for_tenant
+      type: string
+    - admin_ui: {width: 200}
+      name: is_active_for_mybizz
+      type: bool
+    - admin_ui: {width: 200}
+      name: order_in_dropdown
+      type: number
+    server: full
+    title: tax_category_mapping
+  transaction:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: transaction_id
+      type: string
+    - admin_ui: {width: 200}
+      name: paddle_id
+      type: string
+    - admin_ui: {width: 200}
+      name: customer_id
+      target: customer
+      type: link_single
+    - admin_ui: {width: 200}
+      name: subscription_id
+      target: subs
+      type: link_single
+    - admin_ui: {width: 200}
+      name: currency_code
+      type: string
+    - admin_ui: {width: 200}
+      name: created_at_paddle
+      type: datetime
+    - admin_ui: {width: 200}
+      name: user_id
+      target: users
+      type: link_single
+    - admin_ui: {width: 200}
+      name: discount_id
+      target: discount
+      type: link_single
+    - admin_ui: {width: 200}
+      name: updated_at_paddle
+      type: datetime
+    - admin_ui: {width: 200}
+      name: created_at_anvil
+      type: datetime
+    - admin_ui: {width: 200}
+      name: updated_at_anvil
+      type: datetime
+    - admin_ui: {width: 200}
+      name: raw_payload
+      type: simpleObject
+    - admin_ui: {width: 200}
+      name: origin
+      type: string
+    - admin_ui: {width: 200}
+      name: 'customer_id '
+      target: customer
+      type: link_single
+    - admin_ui: {width: 200}
+      name: address_id
+      target: address
+      type: link_single
+    - admin_ui: {width: 200}
+      name: business_id
+      target: business
+      type: link_single
+    - admin_ui: {width: 200}
+      name: invoice_id
+      type: string
+    - admin_ui: {width: 200}
+      name: invoice_number
+      type: string
+    - admin_ui: {width: 200}
+      name: collection_mode
+      type: string
+    - admin_ui: {width: 200}
+      name: billing_details_payment_method_id
+      type: string
+    - admin_ui: {width: 200}
+      name: 'billing_details_purchase_order_number '
+      type: string
+    - admin_ui: {width: 200}
+      name: checkout_url
+      type: string
+    - admin_ui: {width: 200}
+      name: 'billed_at '
+      type: datetime
+    - admin_ui: {width: 200}
+      name: status
+      type: string
+    - admin_ui: {width: 200}
+      name: occurred_at
+      type: datetime
+    - admin_ui: {width: 200}
+      name: details_totals_subtotal
+      type: string
+    - admin_ui: {width: 200}
+      name: details_totals_tax
+      type: string
+    - admin_ui: {width: 200}
+      name: details_totals_discount
+      type: string
+    - admin_ui: {width: 200}
+      name: 'details_totals_total '
+      type: string
+    - admin_ui: {width: 200}
+      name: details_totals_credit
+      type: string
+    - admin_ui: {width: 200}
+      name: details_totals_balance
+      type: string
+    - admin_ui: {width: 200}
+      name: details_totals_grand_total
+      type: string
+    - admin_ui: {width: 200}
+      name: details_totals_fee
+      type: string
+    - admin_ui: {width: 200}
+      name: details_totals_earnings
+      type: string
+    - admin_ui: {width: 200}
+      name: billed_at
+      type: datetime
+    server: full
+    title: transaction
+  transaction_discount_map:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: td_map_id
+      type: string
+    - admin_ui: {width: 200}
+      name: transaction_id
+      target: transaction
+      type: link_single
+    - admin_ui: {width: 200}
+      name: discount_id
+      target: discount
+      type: link_single
+    server: full
+    title: transaction_discount_map
+  transaction_items:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: 'paddle_id '
+      type: string
+    - admin_ui: {width: 200}
+      name: ' transaction_id'
+      target: transaction
+      type: link_single
+    - admin_ui: {width: 200}
+      name: price_id
+      target: prices
+      type: link_single
+    - admin_ui: {width: 200}
+      name: 'quantity '
+      type: number
+    - admin_ui: {width: 200}
+      name: ' proration_rate '
+      type: string
+    - admin_ui: {width: 200}
+      name: proration_billing_period_starts_at
+      type: datetime
+    - admin_ui: {width: 200}
+      name: 'proration_billing_period_ends_at '
+      type: datetime
+    - admin_ui: {width: 200}
+      name: ' created_at_anvil '
+      type: datetime
+    - admin_ui: {width: 200}
+      name: updated_at_anvil
+      type: datetime
+    - admin_ui: {width: 200}
+      name: totals_subtotal
+      type: string
+    - admin_ui: {width: 200}
+      name: totals_tax
+      type: string
+    - admin_ui: {width: 200}
+      name: totals_discount
+      type: string
+    - admin_ui: {width: 200}
+      name: totals_total
+      type: string
+    server: full
+    title: transaction_items
+  transaction_payments:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: 'paddle_id '
+      type: string
+    - admin_ui: {width: 200}
+      name: transaction_id
+      target: transaction
+      type: link_single
+    - admin_ui: {width: 200}
+      name: status
+      type: string
+    - admin_ui: {width: 200}
+      name: ' error_code '
+      type: string
+    - admin_ui: {width: 200}
+      name: method_details_type
+      type: string
+    - admin_ui: {width: 200}
+      name: ' method_details_card_last4 '
+      type: string
+    - admin_ui: {width: 200}
+      name: ' paddle_created_at '
+      type: datetime
+    - admin_ui: {width: 200}
+      name: created_at_anvil
+      type: datetime
+    - admin_ui: {width: 200}
+      name: updated_at_anvil
+      type: datetime
+    - admin_ui: {width: 200}
+      name: amount
+      type: string
+    server: full
+    title: transaction_payments
+  usage_records:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: ' id'
+      type: string
+    - admin_ui: {width: 200}
+      name: subscription_item_id
+      target: null
+      type: link_single
+    - admin_ui: {width: 200}
+      name: 'metric_id '
+      type: string
+    - admin_ui: {width: 200}
+      name: 'quantity '
+      type: number
+    - admin_ui: {width: 200}
+      name: ' created_at_anvil'
+      type: datetime
+    - admin_ui: {width: 200}
+      name: 'updated_at_anvil '
+      type: datetime
+    - admin_ui: {width: 200}
+      name: occured_at
+      type: datetime
+    server: full
+    title: usage_records
+  users:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: email
+      type: string
+    - admin_ui: {width: 200}
+      name: enabled
+      type: bool
+    - admin_ui: {width: 200}
+      name: last_login
+      type: datetime
+    - admin_ui: {width: 200}
+      name: password_hash
+      type: string
+    - admin_ui: {width: 200}
+      name: n_password_failures
+      type: number
+    - admin_ui: {width: 200}
+      name: confirmed_email
+      type: bool
+    - admin_ui: {width: 200}
+      name: user_id
+      type: string
+    - admin_ui: {width: 200}
+      name: first_name
+      type: string
+    - admin_ui: {width: 200}
+      name: last_name
+      type: string
+    - admin_ui: {width: 200}
+      name: full_name
+      type: string
+    - admin_ui: {width: 200}
+      name: remembered_logins
+      type: simpleObject
+    - admin_ui: {width: 200}
+      name: signed_up
+      type: datetime
+    - admin_ui: {width: 200}
+      name: mfa
+      type: simpleObject
+    - admin_ui: {width: 200}
+      name: email_confirmation_key
+      type: string
+    - admin_ui: {order: 5.5, width: 200}
+      name: role
+      target: roles
+      type: link_single
+    - admin_ui: {width: 200}
+      name: signup_status
+      type: string
+    - admin_ui: {width: 200}
+      name: customer
+      type: string
+    - admin_ui: {order: 17, width: 200}
+      name: profile_complete
+      type: bool
+    server: full
+    title: users
+  vault:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: key
+      type: string
+    - admin_ui: {width: 200}
+      name: encrypted_value
+      type: string
+    - admin_ui: {width: 200}
+      name: description
+      type: string
+    - admin_ui: {width: 200}
+      name: owner
+      target: users
+      type: link_single
+    - admin_ui: {width: 200}
+      name: scope
+      type: string
+    - admin_ui: {width: 200}
+      name: created_at
+      type: datetime
+    - admin_ui: {width: 200}
+      name: updated_at
+      type: datetime
+    - admin_ui: {width: 200}
+      name: salt
+      type: string
+    - admin_ui: {width: 200}
+      name: value
+      type: string
+    server: full
+    title: vault
+  webhook_list:
+    client: none
+    columns:
+    - admin_ui: {width: 139}
+      name: event_id
+      type: string
+    - admin_ui: {width: 200}
+      name: event_name
+      type: string
+    - admin_ui: {width: 200}
+      name: description
+      type: string
+    - admin_ui: {width: 200}
+      name: selected
+      type: bool
+    server: full
+    title: webhook_list
+  webhook_log:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: event_id
+      type: string
+    - admin_ui: {width: 200}
+      name: received_at
+      type: datetime
+    - admin_ui: {width: 200}
+      name: event_type
+      type: string
+    - admin_ui: {width: 200}
+      name: resource_id
+      type: string
+    - admin_ui: {width: 200}
+      name: status
+      type: string
+    - admin_ui: {width: 200}
+      name: forwarded_to_hub
+      type: bool
+    - admin_ui: {width: 200}
+      name: processing_details
+      type: string
+    - admin_ui: {width: 200}
+      name: retry_count
+      type: number
+    - admin_ui: {width: 200}
+      name: last_retry_timestamp
+      type: datetime
+    server: full
+    title: webhook_log
+dependencies:
+- dep_id: dep_l6meudozssm7aq
+  resolution_hints: {app_id: C6ZZPAPN4YYF5NVJ, name: Anvil Extras, package_name: anvil_extras}
+  version: {version_tag: v3.1.0}
+metadata: {description: Anvil/ Paddle payment gateway plugin, logo_img: 'asset:handshake_FILL0_wght400_GRAD0_opsz48.png', title: paddle-plugin}
+name: Clone of A_mybizz-v1
+native_deps: {head_html: ''}
+package_name: paddle_plugin
+renamed: true
+runtime_options:
+  client_version: '3'
+  server_spec: null
+  server_spec_disabled:
+    base: python310-minimal
+    requirements: |-
+      selenium
+      PyAutoGUI
+  server_version: python3-full
+  version: 2
+scheduled_tasks:
+- job_id: HJZWIIIX
+  task_name: reprocess_deferred_webhooks
+  time_spec:
+    at: {}
+    every: minute
+    n: 30
+secrets:
+  VAULT_ENCRYPTION_KEY:
+    type: secret
+    value: {OFRVYOSULJFJTDRH: t8zebG5y11jP0IZGUzAt9ATMPLLBfnzodVXEznQ/Ym/oZXOtaAN1RpycsZT1BT1CdAEdzb0E/Thjz/SKBxhfQ+8+IIBssblvmCm5UIvJjTCUur5nRlAkrrgocY+mgI9R9ZAK6u11BPyv4vq6/iUP1Eg7UpXhr3aV2Cck7VPKoDVCunrNh2VCPYW2Zw==}
+services:
+- client_config: {}
+  server_config: {}
+  source: /runtime/services/tables.yml
+- client_config: {}
+  server_config: {}
+  source: /runtime/services/anvil/secrets.yml
+- client_config: {}
+  server_config: {}
+  source: /runtime/services/anvil/files.yml
+- client_config: {}
+  server_config: {}
+  source: /runtime/services/google.yml
+- client_config: {allow_mfa_email_reset: true, allow_remember_me: false, allow_signup: true, confirm_email: true, enable_automatically: true, mfa_timeout_days: 0, remember_me_days: 30, require_mfa: true, use_email: true}
+  server_config: {user_table: users}
+  source: /runtime/services/anvil/users.yml
+- client_config: {}
+  server_config: {}
+  source: /runtime/services/anvil/email.yml
+startup: {module: clear_logs, type: form}
+startup_form: null

@@ -1,0 +1,63 @@
+components:
+- components:
+  - components:
+    - layout_properties: {grid_position: 'RFRVDT,WDBJVO'}
+      name: lbl_filter_status
+      properties: {text: Filter by Status}
+      type: Label
+    - layout_properties: {grid_position: 'RFRVDT,EOIZIA'}
+      name: dd_filter_status
+      properties:
+        items: [All, Active, Archived]
+      type: DropDown
+    - layout_properties: {grid_position: 'VACLOD,HCUMZU BDKOHY,OOZMAY'}
+      name: lbl_filter_type
+      properties: {text: Filter by Type}
+      type: Label
+    - layout_properties: {grid_position: 'VACLOD,HCUMZU NLCTUC,QCOCHA'}
+      name: lbl_sort_by
+      properties: {text: 'Sort by:'}
+      type: Label
+    - layout_properties: {grid_position: 'VACLOD,KRAMKM WZCTMA,ZBXBDN'}
+      name: dd_filter_type
+      properties:
+        items: [All, Product, Service]
+      type: DropDown
+    - layout_properties: {grid_position: 'VACLOD,KRAMKM RCONCR,VGISOO'}
+      name: dd_sort_by
+      properties:
+        items: ['Name (A-Z),Name (Z-A),Created Date (Newest First),Created Date (Oldest First),Item ID (A-Z),Item ID (Z-A),Type (A-Z),Type (Z-A)']
+      type: DropDown
+    - layout_properties: {grid_position: 'CKVUPU,VJHHQQ'}
+      name: btn_apply_filters_sort
+      properties: {role: outlined-button, text: Apply Filters}
+      type: Button
+    - layout_properties: {grid_position: 'YGEBAW,EYDICD'}
+      name: rp_items_list
+      properties: {item_template: report_prod_serve_all_item}
+      type: RepeatingPanel
+    layout_properties: {grid_position: 'DPKURP,JAFWQR'}
+    name: outlined_card_1
+    properties: {role: outlined-card}
+    type: ColumnPanel
+  layout_properties: {slot: default}
+  name: content_panel
+  properties:
+    spacing:
+      margin: ['0', null, null, null]
+      padding: ['0', null, '0', null]
+    spacing_above: none
+    spacing_below: none
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+- layout_properties: {slot: title}
+  name: label_1
+  properties: {text: All Products and Services}
+  type: Label
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

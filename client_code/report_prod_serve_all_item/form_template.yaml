@@ -1,0 +1,50 @@
+components:
+- components:
+  - layout_properties: {grid_position: 'BXAWZE,JGAAIJ'}
+    name: lbl_item_paddle_id
+    properties: {text: Paddle ID}
+    type: Label
+  - layout_properties: {grid_position: 'BXAWZE,HQPRAW'}
+    name: lbl_item_id
+    properties: {text: ItemID}
+    type: Label
+  - layout_properties: {grid_position: 'BXAWZE,FXPOCJ'}
+    name: lbl_item_name
+    properties: {text: Name}
+    type: Label
+  - layout_properties: {grid_position: 'BXAWZE,KOWYSP'}
+    name: lbl_item_type
+    properties: {text: Type}
+    type: Label
+  - layout_properties: {grid_position: 'BXAWZE,VJEKWS'}
+    name: lbl_item_status
+    properties: {text: Status}
+    type: Label
+  - layout_properties: {grid_position: 'BXAWZE,ZDKRHO'}
+    name: lbl_item_created_date
+    properties: {text: 'Created '}
+    type: Label
+  - layout_properties: {grid_position: 'CKVDTX,JLZZYI'}
+    name: lbl_item_description
+    properties: {text: Description}
+    type: Label
+  - layout_properties: {grid_position: 'CKVDTX,GCIBIG'}
+    name: lbl_item_default_price
+    properties: {text: Price}
+    type: Label
+  - layout_properties: {grid_position: 'CKVDTX,QJCOYT'}
+    name: btn_manage_item
+    properties: {role: outlined-button, text: Manage}
+    type: Button
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {col_widths: '{"JLZZYI":40,"GCIBIG":10,"QJCOYT":10}'}
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

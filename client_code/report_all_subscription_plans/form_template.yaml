@@ -1,0 +1,74 @@
+components:
+- components:
+  - components:
+    - layout_properties: {grid_position: 'ZRZQVL,PGUDGL'}
+      name: lbl_filter_title
+      properties: {text: Filters & Sorting}
+      type: Label
+    - layout_properties: {grid_position: 'WNUNDP,YLSQXC'}
+      name: lbl_filter_status_title
+      properties: {text: Status}
+      type: Label
+    - layout_properties: {grid_position: 'WNUNDP,PDTCNX'}
+      name: dd_filter_status
+      properties: {include_placeholder: true, placeholder: All Statuses}
+      type: DropDown
+    - layout_properties: {grid_position: 'WHTVES,SWIAYP XIDWXY,CKMZPF'}
+      name: lbl_filter_subscription_group
+      properties: {text: Subscription Group}
+      type: Label
+    - layout_properties: {grid_position: 'WHTVES,SWIAYP KNBMUB,OQMHQW'}
+      name: lbl_sort_by_title
+      properties: {text: 'Sort By:'}
+      type: Label
+    - layout_properties: {grid_position: 'WHTVES,OXAGCI SVAQCH,QSEMMN'}
+      name: dd_filter_subscription_group
+      properties: {background: '', include_placeholder: true, placeholder: All Items}
+      type: DropDown
+    - layout_properties: {grid_position: 'WHTVES,OXAGCI FODJCG,BROMGA'}
+      name: dd_sort_by
+      properties: {include_placeholder: true, placeholder: Selection}
+      type: DropDown
+    - layout_properties: {grid_position: 'RICLLN,FFIWNM'}
+      name: btn_clear_filters
+      properties: {role: outlined-button, text: Clear Filters}
+      type: Button
+    - layout_properties: {grid_position: 'RICLLN,NQDWKO'}
+      name: btn_refresh_list
+      properties: {role: outlined-button, text: Refresh Full List}
+      type: Button
+    - layout_properties: {grid_position: 'RICLLN,IATNGI'}
+      name: btn_apply_filters
+      properties: {role: outlined-button, text: Apply Filters & Sort}
+      type: Button
+    layout_properties: {grid_position: 'TQVKRC,CORYIF'}
+    name: outlined_card_1
+    properties: {role: outlined-card}
+    type: ColumnPanel
+  - layout_properties: {grid_position: 'AXHCNP,MXRECL'}
+    name: rp_subscription_plans
+    properties: {item_template: report_all_subscription_plans_item}
+    type: RepeatingPanel
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+- components:
+  - layout_properties: {}
+    name: btn_home
+    properties: {role: outlined-button, text: Home}
+    type: Button
+  layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+- layout_properties: {slot: title}
+  name: lbl_report_title
+  properties:
+    text: |
+      All Subscription Plan Prices
+  type: Label
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

@@ -1,0 +1,61 @@
+components:
+- components:
+  - layout_properties: {grid_position: 'SIVIVE,ZHGTVW ROIPVB,XNRPYX'}
+    name: lbl_user_email
+    properties: {text: Show user's email}
+    type: Label
+  - layout_properties: {grid_position: 'SIVIVE,ZHGTVW RIWHNW,KJWPNI'}
+    name: lbl_status
+    properties: {text: 'Status:'}
+    type: Label
+  - layout_properties: {grid_position: 'SIVIVE,ZHGTVW RIWHNW,AXBRLE'}
+    name: lbl_user_status_anvil
+    properties: {align: left, text: 'Enabled, Disabled, Email not confirmed"'}
+    type: Label
+  - layout_properties: {grid_position: 'SIVIVE,UKMFTE'}
+    name: lbl_user_full_name
+    properties: {text: Full name}
+    type: Label
+  - layout_properties: {grid_position: 'SIVIVE,UKMFTE EZMEAI,UFAMVT'}
+    name: lbl_user_current_role
+    properties: {}
+    type: Label
+  - event_bindings: {change: dd_user_assign_role_change}
+    layout_properties: {grid_position: 'ZKBSKQ,KAHXKY'}
+    name: dd_user_assign_role
+    properties: {include_placeholder: true, placeholder: "\tRole selection (admin, user, etc.)"}
+    type: DropDown
+  - layout_properties: {grid_position: 'UMKRYG,PPKKPF'}
+    name: btn_resend_confirmation
+    properties: {role: outlined-button, text: Resend confirmation}
+    type: Button
+  - layout_properties: {grid_position: 'UMKRYG,QNTVXG'}
+    name: btn_user_enable_disable
+    properties: {role: outlined-button, text: Change Status}
+    type: Button
+  - event_bindings: {click: btn_user_save_changes_click}
+    layout_properties: {grid_position: 'UMKRYG,KQOSNI'}
+    name: btn_user_save_changes
+    properties: {role: outlined-button, text: Save changes}
+    type: Button
+  - event_bindings: {click: btn_user_delete_click}
+    layout_properties: {grid_position: 'UMKRYG,XONCHE'}
+    name: btn_user_delete
+    properties: {icon: 'fa:trash-o', role: outlined-button, text: Delete user}
+    type: Button
+  layout_properties: {slot: default}
+  name: content_panel
+  properties:
+    col_widths: '{"ZHGTVW":30,"UKMFTE":30,"KJWPNI":15,"AXBRLE":45,"UFAMVT":45}'
+    spacing:
+      margin: [0, null, null, null]
+      padding: [0, null, null, null]
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

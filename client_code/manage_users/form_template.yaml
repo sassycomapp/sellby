@@ -1,0 +1,37 @@
+components:
+- components:
+  - components:
+    - event_bindings: {click: btn_refresh_click}
+      layout_properties: {grid_position: 'CMEMAS,IQHUOL'}
+      name: btn_refresh
+      properties: {role: outlined-button, text: Refresh}
+      type: Button
+    - event_bindings: {click: btn_home_click}
+      layout_properties: {grid_position: 'CMEMAS,YYUFTU'}
+      name: btn_home
+      properties: {role: outlined-button, text: Home}
+      type: Button
+    - layout_properties: {grid_position: 'XCYELS,YIXBOU'}
+      name: lbl_title
+      properties: {text: Manage Users}
+      type: Label
+    - layout_properties: {grid_position: 'FJUEVF,AXQKUR'}
+      name: rp_users
+      properties: {item_template: user_admin_row}
+      type: RepeatingPanel
+    layout_properties: {grid_position: 'OTXJXB,LKDLJS'}
+    name: outlined_card_1
+    properties: {role: outlined-card}
+    type: ColumnPanel
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

@@ -1,0 +1,36 @@
+components:
+- components:
+  - layout_properties: {grid_position: 'UZHHFB,QLYMEI'}
+    name: lbl_service_name
+    properties:
+      text: |
+        Service name
+    type: Label
+  - layout_properties: {grid_position: 'UZHHFB,VQULRP'}
+    name: lbl_total_revenue
+    properties: {text: Total revenue}
+    type: Label
+  - layout_properties: {grid_position: 'UZHHFB,VQLQUC'}
+    name: lbl_units_sold
+    properties: {text: Units sold}
+    type: Label
+  - layout_properties: {grid_position: 'UZHHFB,ZOWYYQ'}
+    name: lbl_customer_count
+    properties: {text: Customer count}
+    type: Label
+  - layout_properties: {grid_position: 'UZHHFB,GISHTY'}
+    name: lbl_arpu
+    properties: {text: ARPU}
+    type: Label
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

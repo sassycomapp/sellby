@@ -1,0 +1,50 @@
+components:
+- components:
+  - components:
+    - layout_properties: {grid_position: 'DFSLFV,TZTIGL'}
+      name: dp_start_date
+      properties: {placeholder: Start Date}
+      type: DatePicker
+    - layout_properties: {grid_position: 'DFSLFV,MXLUMQ'}
+      name: dp_end_date
+      properties: {placeholder: End Dtae}
+      type: DatePicker
+    - layout_properties: {grid_position: 'DFSLFV,GFYCTF'}
+      name: dd_status_filter
+      properties:
+        include_placeholder: true
+        items: [All, Active, Expired, Archived]
+        placeholder: Status Filter
+      type: DropDown
+    - layout_properties: {grid_position: 'EKCMVN,NWEKXM'}
+      name: btn_apply_filters
+      properties: {role: outlined-button, text: Apply Filters}
+      type: Button
+    layout_properties: {grid_position: 'KKQABB,AKMWEU'}
+    name: outlined_card_1
+    properties: {role: outlined-card}
+    type: ColumnPanel
+  - layout_properties: {grid_position: 'QJNOAP,QNRJQO'}
+    name: rp_discounts
+    properties: {item_template: report_discount_analytics_item}
+    type: RepeatingPanel
+  - layout_properties: {grid_position: 'JBOCTG,HRDSPV'}
+    name: btn_refresh
+    properties: {role: outlined-button, text: Refresh}
+    type: Button
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+- layout_properties: {slot: title}
+  name: label_1
+  properties: {text: Discount Analytics}
+  type: Label
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

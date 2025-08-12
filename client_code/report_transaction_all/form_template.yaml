@@ -1,0 +1,68 @@
+components:
+- components:
+  - layout_properties: {grid_position: 'FFIJJP,TUVGID'}
+    name: label_1
+    properties: {}
+    type: Label
+  - components:
+    - layout_properties: {grid_position: 'GIEBNI,YATWDB'}
+      name: dp_start_date
+      properties: {placeholder: Start date}
+      type: DatePicker
+    - layout_properties: {grid_position: 'GIEBNI,QZSKAL'}
+      name: dp_end_date
+      properties: {placeholder: End Date}
+      type: DatePicker
+    - layout_properties: {grid_position: 'GIEBNI,SBIZTQ'}
+      name: dd_status_filter
+      properties:
+        items: ['All Statuses ', 'Paid ', 'Failed ', Canceled]
+      type: DropDown
+    - layout_properties: {grid_position: 'TSCQZT,POODSC'}
+      name: lbl_sort_by
+      properties: {text: Sort by}
+      type: Label
+    - layout_properties: {grid_position: 'TSCQZT,VARMET'}
+      name: dd_sort_criteria
+      properties: {include_placeholder: true, placeholder: Criteria to sort by}
+      type: DropDown
+    - layout_properties: {grid_position: 'TSCQZT,EHXHIW'}
+      name: btn_filter
+      properties: {role: outlined-button, text: Apply Filters}
+      type: Button
+    layout_properties: {grid_position: 'WSWHZS,WKZCUY'}
+    name: outlined_card_1
+    properties: {role: outlined-card}
+    type: ColumnPanel
+  - layout_properties: {grid_position: 'CBRXCJ,DGIOXG'}
+    name: rp_transactions
+    properties: {item_template: report_transaction_all_item, spacing_above: none, spacing_below: none}
+    type: RepeatingPanel
+  - layout_properties: {grid_position: 'QHKFVX,FPMMZQ'}
+    name: btn_previous_page
+    properties: {align: right, role: outlined-button, text: Previous Page}
+    type: Button
+  - layout_properties: {grid_position: 'QHKFVX,JYIWME'}
+    name: lbl_page_info
+    properties: {align: center}
+    type: Label
+  - layout_properties: {grid_position: 'QHKFVX,JRUOAK'}
+    name: btn_next_page
+    properties: {align: left, role: outlined-button, text: Next Page}
+    type: Button
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {col_widths: '{"FPMMZQ":20,"JYIWME":20,"JRUOAK":20}'}
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+- layout_properties: {slot: title}
+  name: lbl_title
+  properties: {text: Review Transactions}
+  type: Label
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

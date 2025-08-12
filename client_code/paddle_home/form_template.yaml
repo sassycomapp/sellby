@@ -1,0 +1,239 @@
+components:
+- components:
+  - layout_properties: {grid_position: 'JGUUQZ,SRJMKJ'}
+    name: lbl_welcome
+    properties: {align: left, text: 'HI, Welcome to MyBizz'}
+    type: Label
+  - layout_properties: {grid_position: 'JGUUQZ,WYQTGS'}
+    name: lbl_active_role
+    properties: {align: right}
+    type: Label
+  - layout_properties: {grid_position: 'JGUUQZ,GQKENA'}
+    name: lbl_admin_status
+    properties: {align: right, bold: false, italic: false}
+    type: Label
+  - components:
+    - event_bindings: {click: btn_login_click}
+      layout_properties: {grid_position: 'JOMPXI,UASPUQ'}
+      name: btn_login
+      properties: {align: center, role: outlined-button, text: Login}
+      type: Button
+    - event_bindings: {click: btn_logout_click}
+      layout_properties: {grid_position: 'JOMPXI,UBNUMX'}
+      name: btn_logout
+      properties: {align: left, role: outlined-button, text: Logout}
+      type: Button
+    - event_bindings: {click: btn_site_click}
+      layout_properties: {grid_position: 'JOMPXI,ZREIGC'}
+      name: btn_site
+      properties: {role: outlined-button, text: Site}
+      type: Button
+    - components:
+      - components:
+        - event_bindings: {click: btn_manage_users_click}
+          layout_properties: {grid_position: 'YVOMTZ,LNOAAH'}
+          name: btn_manage_users
+          properties: {align: full, role: outlined-button, text: Manage Users}
+          type: Button
+        - event_bindings: {click: btn_manage_rbac_click}
+          layout_properties: {grid_position: 'YVOMTZ,YLQUGN'}
+          name: btn_manage_rbac
+          properties: {align: full, role: outlined-button, text: Manage RBAC}
+          type: Button
+        - event_bindings: {click: btn_tenant_mgt_click}
+          layout_properties: {grid_position: 'YVOMTZ,IMYDFS'}
+          name: btn_tenant_mgt
+          properties: {align: full, role: outlined-button, text: Manage Tenants}
+          type: Button
+        layout_properties: {grid_position: 'EUNCCP,ETBUUX'}
+        name: crd_manage_people
+        properties: {role: outlined-card}
+        type: ColumnPanel
+      - components:
+        - layout_properties: {grid_position: 'QALVNI,ZBIFRY'}
+          name: btn_manage_webhooks
+          properties: {align: full, role: outlined-button, text: Manage Webhooks}
+          type: Button
+        - layout_properties: {grid_position: 'QALVNI,AFDAJN'}
+          name: btn_manage_webhook_retries
+          properties: {align: full, role: outlined-button, text: Manage Webhook Retries}
+          type: Button
+        - event_bindings: {click: btn_manage_prices_click}
+          layout_properties: {grid_position: 'NAWNIQ,MRJLQP'}
+          name: btn_manage_prices
+          properties: {align: full, role: outlined-button, text: Manage Prices}
+          type: Button
+        - layout_properties: {grid_position: 'NAWNIQ,WZCLTW'}
+          name: btn_manage_discounts
+          properties: {align: full, role: outlined-button, text: Manage Discounts}
+          type: Button
+        - event_bindings: {click: btn_manage_settings_click}
+          layout_properties: {grid_position: 'ISSISX,LBDJKR THETYD,SETINI'}
+          name: btn_manage_settings
+          properties: {align: full, role: outlined-button, text: Manage Settings}
+          type: Button
+        - event_bindings: {click: btn_update_currency_click}
+          layout_properties: {grid_position: 'ISSISX,LBDJKR TFPGBF,QTCMUW'}
+          name: btn_update_currency
+          properties:
+            align: full
+            role: outlined-button
+            text: |
+              Update Currencies
+          type: Button
+        - event_bindings: {click: btn_vault_click}
+          layout_properties: {grid_position: 'ISSISX,OFUYAR YWPMVD,PIUFJP'}
+          name: btn_vault
+          properties: {align: full, role: outlined-button, text: Manage Vault}
+          type: Button
+        - event_bindings: {click: btn_debug_diagnostics_click}
+          layout_properties: {grid_position: 'ISSISX,OFUYAR WWHVVM,FCKHTG'}
+          name: btn_debug_diagnostics
+          properties: {align: full, role: outlined-button, text: Developer Diagnostics}
+          type: Button
+        layout_properties: {grid_position: 'KHRCBH,GGRGDS'}
+        name: crd_manage_main
+        properties: {role: outlined-card}
+        type: ColumnPanel
+      - components:
+        - layout_properties: {grid_position: 'GYIGZD,EOYRVU'}
+          name: lbl_subs
+          properties: {text: Subscriptions}
+          type: Label
+        - event_bindings: {click: btn_manage_subscription_click}
+          layout_properties: {grid_position: 'QCNDPD,YKAUJL'}
+          name: btn_manage_subscription
+          properties: {align: full, role: outlined-button, text: Manage Subscriptions}
+          type: Button
+        - event_bindings: {click: btn_report_subscription_all_click}
+          layout_properties: {grid_position: 'PPOMOD,JPZWUE'}
+          name: btn_report_subscription_all
+          properties: {align: full, role: outlined-button, text: All subscriptions Report}
+          type: Button
+        - event_bindings: {click: btn_report_subscription_sales_all_click}
+          layout_properties: {grid_position: 'WEMOWX,KFUARH'}
+          name: btn_report_subscription_sales_all
+          properties: {align: full, role: outlined-button, text: All Subscriptions Sales Report}
+          type: Button
+        - event_bindings: {click: btn_report_subscription_sales_single_click}
+          layout_properties: {grid_position: 'IBXAAS,OGAEWQ'}
+          name: btn_report_subscription_sales_single
+          properties: {align: full, role: outlined-button, text: One Subscription Sales Report}
+          type: Button
+        - layout_properties: {grid_position: 'YLKFTY,EGKMTT'}
+          name: btn_subs_transaction
+          properties: {align: full, role: outlined-button, text: Subscription Transactions}
+          type: Button
+        layout_properties: {grid_position: 'MWHQKS,PHOFIT'}
+        name: crd_reports_subs
+        properties: {role: outlined-card}
+        type: ColumnPanel
+      - components:
+        - event_bindings: {click: btn_metrics_dashboard_click}
+          layout_properties: {grid_position: 'ZTVVHI,ILIDAX'}
+          name: btn_metrics_dashboard
+          properties: {align: full, role: outlined-button, text: Metrics Dashboard}
+          type: Button
+        - event_bindings: {click: btn_report_payment_failure_click}
+          layout_properties: {grid_position: 'ZTVVHI,CNMDGB'}
+          name: btn_report_payment_failure
+          properties: {align: full, role: outlined-button, text: Failed Payments Report}
+          type: Button
+        layout_properties: {grid_position: 'FZQBEO,TYCRSU'}
+        name: crd_reports_main
+        properties: {role: outlined-card}
+        type: ColumnPanel
+      - components:
+        - layout_properties: {grid_position: 'JPEOGQ,BEPLAA'}
+          name: lbl_services
+          properties: {text: Services}
+          type: Label
+        - event_bindings: {click: btn_manage_service_click}
+          layout_properties: {grid_position: 'LFRENS,YGNKYL'}
+          name: btn_manage_service
+          properties: {align: full, role: outlined-button, text: Manage Services}
+          type: Button
+        - event_bindings: {click: btn_report_service_all_click}
+          layout_properties: {grid_position: 'JEOXTT,TYBRIC'}
+          name: btn_report_service_all
+          properties: {align: full, role: outlined-button, text: All Services Report}
+          type: Button
+        - event_bindings: {click: btn_report_service_sales_all_click}
+          layout_properties: {grid_position: 'HVWJCI,OBPIIG'}
+          name: btn_report_service_sales_all
+          properties:
+            align: full
+            role: outlined-button
+            text: |
+              All Services Sales Report
+          type: Button
+        - event_bindings: {click: btn_report_service_sales_single_click}
+          layout_properties: {grid_position: 'FHGVPO,JZSQKI'}
+          name: btn_report_service_sales_single
+          properties: {align: full, role: outlined-button, text: One Service Sales Report}
+          type: Button
+        - layout_properties: {grid_position: 'SDBDXH,COYRDN'}
+          name: btn_service_transaction
+          properties: {align: full, role: outlined-button, text: Service Transactions}
+          type: Button
+        layout_properties: {grid_position: 'MWHQKS,QXEVWB'}
+        name: crd_reports_service
+        properties: {role: outlined-card}
+        type: ColumnPanel
+      - components:
+        - layout_properties: {grid_position: 'AOWGOK,UJZOWA'}
+          name: lbl_products
+          properties: {text: Products}
+          type: Label
+        - event_bindings: {click: btn_manage_product_click}
+          layout_properties: {grid_position: 'PGOCJM,RMIXRG'}
+          name: btn_manage_product
+          properties: {align: full, role: outlined-button, text: Manage Products}
+          type: Button
+        - event_bindings: {click: btn_report_product_all_click}
+          layout_properties: {grid_position: 'VGBOJV,YFZHNH'}
+          name: btn_report_product_all
+          properties: {align: full, role: outlined-button, text: All Products Report}
+          type: Button
+        - event_bindings: {click: btn_report_product_sales_all_click}
+          layout_properties: {grid_position: 'FZEJYT,NKFPHB'}
+          name: btn_report_product_sales_all
+          properties: {align: full, role: outlined-button, text: All Products Sales Report}
+          type: Button
+        - event_bindings: {click: btn_report_product_sales_single_click}
+          layout_properties: {grid_position: 'XMBLZQ,SPPZBP'}
+          name: btn_report_product_sales_single
+          properties: {align: full, role: outlined-button, text: One Product Sales Report}
+          type: Button
+        - layout_properties: {grid_position: 'NITWPZ,LGVDDX'}
+          name: btn_product_transaction
+          properties: {align: full, role: outlined-button, text: Product Transactions}
+          type: Button
+        layout_properties: {grid_position: 'MWHQKS,OGRBGK'}
+        name: crd_reports_product
+        properties: {role: outlined-card}
+        type: ColumnPanel
+      layout_properties: {grid_position: 'EOJFIZ,DSKRZX'}
+      name: cp_main
+      properties: {col_widths: '{"PHOFIT":25,"OGRBGK":25,"QXEVWB":20}'}
+      type: ColumnPanel
+    layout_properties: {grid_position: 'VNHZET,UMWSMM'}
+    name: outlined_card_1
+    properties:
+      col_widths: '{"UASPUQ":10,"ZREIGC":10,"UBNUMX":50}'
+      role: outlined-card
+      spacing:
+        margin: [15, null, null, null]
+    type: ColumnPanel
+  layout_properties: {slot: default}
+  name: crd_top_level
+  properties: {}
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

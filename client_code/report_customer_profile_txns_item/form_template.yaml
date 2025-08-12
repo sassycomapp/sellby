@@ -1,0 +1,48 @@
+components:
+- components:
+  - layout_properties: {grid_position: 'MKEKTE,IZPZTT'}
+    name: lbl_txn_billed_at_value
+    properties:
+      spacing:
+        margin: [0, null, 0, null]
+        padding: [0, null, 0, null]
+      spacing_above: none
+      spacing_below: none
+      text: transaction.billed_at
+    type: Label
+  - layout_properties: {grid_position: 'MKEKTE,KOJXIL'}
+    name: lbl_txn_status_value
+    properties:
+      spacing:
+        margin: [0, null, '0', null]
+        padding: [0, null, '0', null]
+      spacing_above: none
+      spacing_below: none
+      text: Transaction Status
+    type: Label
+  - layout_properties: {grid_position: 'MKEKTE,VXZKHC'}
+    name: lbl_txn_amount_value
+    properties:
+      spacing:
+        padding: ['0', null, '0', null]
+      spacing_above: none
+      spacing_below: none
+      text: Transaction Amount
+    type: Label
+  layout_properties: {slot: default}
+  name: cp_txn_item_container
+  properties:
+    spacing:
+      margin: [0, null, 0, null]
+      padding: [0, null, 0, null]
+    spacing_above: none
+    spacing_below: none
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

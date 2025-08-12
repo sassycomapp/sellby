@@ -1,0 +1,191 @@
+components:
+- components:
+  - layout_properties: {grid_position: 'JMXYVZ,CGRIYW'}
+    name: lbl_page_title_settings
+    properties: {text: Manage Settings}
+    type: Label
+  - components:
+    - layout_properties: {grid_position: 'FZKHZW,PQNTXA'}
+      name: btn_home
+      properties: {align: full, role: outlined-button, text: Home}
+      type: Button
+    - layout_properties: {grid_position: 'FZKHZW,AMGCEE'}
+      name: lbl_create_setting
+      properties: {align: center, text: Create New Setting}
+      type: Label
+    - layout_properties: {grid_position: 'FZKHZW,JJCIPO'}
+      name: spacer_3
+      properties: {height: 32}
+      type: Spacer
+    - layout_properties: {grid_position: 'QQQKWW,YKZFGV'}
+      name: lbl_new_setting_name
+      properties: {align: right, text: Add new setting name}
+      type: Label
+    - layout_properties: {grid_position: 'QQQKWW,PQCIEI'}
+      name: tb_new_setting_name
+      properties: {placeholder: Enter New Setting Name}
+      type: TextBox
+    - layout_properties: {grid_position: 'OTVKGB,XXNVYS'}
+      name: lbl_new_setting_value
+      properties: {align: right, text: New setting value}
+      type: Label
+    - layout_properties: {grid_position: 'OTVKGB,DWUWKH'}
+      name: tb_new_setting_value
+      properties: {text: Enter New Setting Value}
+      type: TextBox
+    - layout_properties: {grid_position: 'CQWAKJ,CWQTVL'}
+      name: lbl_setting_checkbox
+      properties: {align: right, text: indicate if this is a yes/no value}
+      type: Label
+    - layout_properties: {grid_position: 'CQWAKJ,SKTGJV'}
+      name: sw_new_value_is_bool
+      properties: {}
+      type: form:dep_l6meudozssm7aq:Switch
+    - layout_properties: {grid_position: 'CQWAKJ,AKIOSH'}
+      name: label_1
+      properties: {align: right, text: switch on if value is 'YES'}
+      type: Label
+    - layout_properties: {grid_position: 'CQWAKJ,IPWJEN'}
+      name: sw_new_value_is_true
+      properties: {}
+      type: form:dep_l6meudozssm7aq:Switch
+    - layout_properties: {grid_position: 'XXMWWD,DZZCED'}
+      name: spacer_1
+      properties: {height: 32}
+      type: Spacer
+    - layout_properties: {grid_position: 'XXMWWD,QDAAPK'}
+      name: btn_new_save_setting
+      properties: {align: full, role: outlined-button, text: Create New Setting}
+      type: Button
+    layout_properties: {grid_position: 'JBJJNM,KOWQQO'}
+    name: outlined_card_1
+    properties: {col_widths: '{"CWQTVL":30,"XXNVYS":30,"DWUWKH":30,"AMGCEE":36,"PQNTXA":12,"JJCIPO":12,"SKTGJV":18,"IPWJEN":12,"AKIOSH":15}', role: outlined-card}
+    type: ColumnPanel
+  - components:
+    - layout_properties: {grid_position: 'TSLGAN,QSMINX'}
+      name: lbl_update_setting
+      properties: {align: center, text: Update Existing Settings}
+      type: Label
+    - layout_properties: {grid_position: 'SNGZGY,QVCDOP QSTXLL,VGWKEH'}
+      name: lbl_setting_list
+      properties: {align: right, text: Settings List (click to select)}
+      type: Label
+    - layout_properties: {grid_position: 'SNGZGY,QVCDOP KZYPGA,TRNCCC'}
+      name: lbl_current_value
+      properties: {align: right, text: Current Setting Value}
+      type: Label
+    - layout_properties: {grid_position: 'SNGZGY,QVCDOP WIKJKB,WBALKG'}
+      name: lbl_update_value
+      properties: {align: right, text: Update setting Value}
+      type: Label
+    - layout_properties: {grid_position: 'SNGZGY,MBZCMS JHNPEG,FPGCBJ'}
+      name: dd_setting_list
+      properties: {}
+      type: DropDown
+    - layout_properties: {grid_position: 'SNGZGY,MBZCMS NKYNSK,ZVXNMZ'}
+      name: lbl_show_current_value
+      properties: {}
+      type: Label
+    - layout_properties: {grid_position: 'SNGZGY,MBZCMS XCRJPR,NDJEZR'}
+      name: tb_update_value
+      properties: {}
+      type: TextBox
+    - layout_properties: {grid_position: 'IQANRY,UTUMMN'}
+      name: label_6
+      properties: {align: right, text: indicate if this is a yes/no value}
+      type: Label
+    - layout_properties: {grid_position: 'IQANRY,IEKGNQ'}
+      name: sw_update_value_is_bool
+      properties: {}
+      type: form:dep_l6meudozssm7aq:Switch
+    - layout_properties: {grid_position: 'IQANRY,XDFQTJ'}
+      name: label_2
+      properties: {text: switch on if value is 'YES'}
+      type: Label
+    - layout_properties: {grid_position: 'IQANRY,HSQFPC'}
+      name: sw_update_value_is_true
+      properties: {}
+      type: form:dep_l6meudozssm7aq:Switch
+    - layout_properties: {grid_position: 'ZYRIKD,UBARHX'}
+      name: spacer_2
+      properties: {height: 32}
+      type: Spacer
+    - layout_properties: {grid_position: 'ZYRIKD,BDOREF'}
+      name: btn_update_settings
+      properties: {align: full, role: outlined-button, text: Update Setting Now}
+      type: Button
+    layout_properties: {grid_position: 'BLMQIV,EXEECZ'}
+    name: outlined_card_2
+    properties: {col_widths: '{"UTUMMN":30,"UBARHX":30,"BDOREF":30,"IEKGNQ":18,"HSQFPC":12,"XDFQTJ":15}', role: outlined-card}
+    type: ColumnPanel
+  - components:
+    - layout_properties: {grid_position: 'FLXYCV,YTFHUG'}
+      name: label_5
+      properties: {text: Set Log Level}
+      type: Label
+    - event_bindings: {change: dd_log_Level_change}
+      layout_properties: {grid_position: 'ZAWSNG,WUCLNX'}
+      name: dd_log_level
+      properties:
+        items: [DEBUG, INFO, WARNING, ERROR, CRITICAL]
+      type: DropDown
+    - layout_properties: {grid_position: 'ZAWSNG,ZHDEDL'}
+      name: lbl_log_level
+      properties: {text: Current log Level}
+      type: Label
+    - event_bindings: {click: btn_set_log_level_click}
+      layout_properties: {grid_position: 'ZAWSNG,BAELCH'}
+      name: btn_set_log_level
+      properties: {role: outlined-button, text: Set Log Level}
+      type: Button
+    - event_bindings: {click: btn_refresh_log_level_click}
+      layout_properties: {grid_position: 'ZAWSNG,ZMSUKP'}
+      name: btn_refresh_log_level
+      properties: {role: outlined-button, text: Refresh Log Level}
+      type: Button
+    layout_properties: {grid_position: 'XTRIMV,YBLYJK'}
+    name: outlined_card_4
+    properties: {role: outlined-card}
+    type: ColumnPanel
+  - components:
+    - layout_properties: {grid_position: 'VKRDSJ,WEHWNA'}
+      name: label_3
+      properties: {text: Set System Currency}
+      type: Label
+    - layout_properties: {grid_position: 'VKRDSJ,HPPVWH'}
+      name: label_4
+      properties: {text: The System Currency can only be set once and must be the same as registered on Paddle.com}
+      type: Label
+    - event_bindings: {change: dd_system_currency_change}
+      layout_properties: {grid_position: 'HGBESH,VZGDVV'}
+      name: dd_system_currency
+      properties: {}
+      type: DropDown
+    - layout_properties: {grid_position: 'HGBESH,XJEKEF'}
+      name: lbl_system_currency_code
+      properties: {}
+      type: Label
+    - layout_properties: {grid_position: 'HGBESH,FGRKVU'}
+      name: lbl_system_currency_country
+      properties: {}
+      type: Label
+    - layout_properties: {grid_position: 'HGBESH,TFHFZO'}
+      name: btn_set_system_currency
+      properties: {role: outlined-button, text: Set System Currency}
+      type: Button
+    layout_properties: {grid_position: 'TKGAQI,OXEXXT'}
+    name: outlined_card_3
+    properties: {col_widths: '{"WEHWNA":15,"HPPVWH":45}', role: outlined-card}
+    type: ColumnPanel
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

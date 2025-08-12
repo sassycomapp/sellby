@@ -1,0 +1,142 @@
+components:
+- components:
+  - layout_properties: {grid_position: 'XNVSPN,WGTMGS'}
+    name: lbl_form_title
+    properties: {text: Manage Product}
+    type: Label
+  - components:
+    - layout_properties: {grid_position: 'XNCXTE,ZYYYAU'}
+      name: lbl_manage_product
+      properties: {text: Manage Product}
+      type: Label
+    - layout_properties: {grid_position: 'XNCXTE,QJHUOW WAUWEH,IQHHAS'}
+      name: lbl_product_new
+      properties: {align: right, text: New}
+      type: Label
+    - layout_properties: {grid_position: 'XNCXTE,QJHUOW WAUWEH,RSDYIH'}
+      name: sw_product_action
+      properties: {}
+      type: form:dep_l6meudozssm7aq:Switch
+    - layout_properties: {grid_position: 'XNCXTE,WRYXCF'}
+      name: lbl_product_update
+      properties: {text: Update}
+      type: Label
+    - layout_properties: {grid_position: 'XNCXTE,PVNRSD'}
+      name: spacer_1
+      properties: {height: 32}
+      type: Spacer
+    - layout_properties: {grid_position: 'XNCXTE,LOTLPK'}
+      name: lbl_product_archived
+      properties: {align: center, text: Archived}
+      type: Label
+    - layout_properties: {grid_position: 'XNCXTE,SLBXUA'}
+      name: sw_product_status
+      properties: {align: left, checked: false}
+      type: form:dep_l6meudozssm7aq:Switch
+    - layout_properties: {grid_position: 'XNCXTE,OAEZQX'}
+      name: lbl_product_active
+      properties: {align: center, text: Active}
+      type: Label
+    - event_bindings: {click: btn_home_click}
+      layout_properties: {grid_position: 'XNCXTE,XQMLML'}
+      name: btn_home
+      properties: {align: right, role: outlined-button, text: Home}
+      type: Button
+    - components:
+      - event_bindings: {change: dd_product_change}
+        layout_properties: {grid_position: 'ODPQUZ,JEKQYD AJSPNA,EHJMGM'}
+        name: dd_product
+        properties: {include_placeholder: true, placeholder: Lookup Existing Product}
+        type: DropDown
+      - layout_properties: {grid_position: 'ODPQUZ,JEKQYD NVJJJW,SRNXZG'}
+        name: tb_product_name
+        properties: {placeholder: Product Name}
+        type: TextBox
+      - layout_properties: {grid_position: 'ODPQUZ,JEKQYD NVJJJW,SAYLSL'}
+        name: lbl_product_num
+        properties: {text: New Product}
+        type: Label
+      - event_bindings: {change: fl_product_image_change}
+        layout_properties: {grid_position: 'ODPQUZ,HRRXKE ERBAFX,UNFUVZ'}
+        name: fl_product_image
+        properties: {icon: 'fa:upload', text: Upload Image}
+        type: FileLoader
+      - layout_properties: {grid_position: 'ODPQUZ,HRRXKE OVVLZI,XXLROB'}
+        name: img_product
+        properties: {height: 168.5}
+        type: Image
+      - layout_properties: {grid_position: 'ODPQUZ,JEKQYD NVZWOB,LHRHCY'}
+        name: ta_product_description
+        properties: {text: Product Description}
+        type: TextArea
+      - layout_properties: {grid_position: 'ODPQUZ,JEKQYD HEDNCO,NAAWBU'}
+        name: tb_product_image_url
+        properties: {placeholder: Image URL}
+        type: TextBox
+      - layout_properties: {grid_position: 'ODPQUZ,JEKQYD HEDNCO,PJALVU'}
+        name: tb_img_name
+        properties: {placeholder: Image file name, role: outlined}
+        type: TextBox
+      - layout_properties: {grid_position: 'FWRXNE,QYGYJY KSRIFY,OUSTXV'}
+        name: dd_product_use_case
+        properties: {include_placeholder: true, placeholder: Select a use case...}
+        type: DropDown
+      - layout_properties: {grid_position: 'FWRXNE,QYGYJY DXDVMH,AROZRM'}
+        name: ta_custom_data
+        properties: {height: 43.6666259765625, placeholder: Custom Data (Enter valid JSON or leave blank)}
+        type: TextArea
+      - layout_properties: {grid_position: 'FWRXNE,FCESSR RLTPEH,UZKGAX'}
+        name: lbl_product_use_case
+        properties: {text: 'What best describes this digital product?'}
+        type: Label
+      - layout_properties: {grid_position: 'FWRXNE,FCESSR IZIANF,PCLTEJ'}
+        name: lbl_selected_paddle_tax_category
+        properties: {text: 'Paddle Tax Category:', visible: false}
+        type: Label
+      - layout_properties: {grid_position: 'ZQRLRS,GLEDOW'}
+        name: lbl_prices_section_title
+        properties: {text: Associated Prices for this Product}
+        type: Label
+      - layout_properties: {grid_position: 'YARAWN,XKZRCH'}
+        name: rp_prices
+        properties: {item_template: manage_product_prices_item}
+        type: RepeatingPanel
+      - event_bindings: {click: btn_reset_click}
+        layout_properties: {grid_position: 'EHPURN,DFXJPF'}
+        name: btn_reset
+        properties: {role: outlined-button, text: Clear/New}
+        type: Button
+      - layout_properties: {grid_position: 'EHPURN,WWLQSA'}
+        name: btn_add_price
+        properties: {icon: 'fa:plus', role: outlined-button, text: Add New Price}
+        type: Button
+      - event_bindings: {click: btn_delete_click}
+        layout_properties: {grid_position: 'EHPURN,CBDTIZ'}
+        name: btn_delete
+        properties: {role: outlined-button, text: Delete Product}
+        type: Button
+      - event_bindings: {click: btn_product_save_click}
+        layout_properties: {grid_position: 'EHPURN,IJRVPM'}
+        name: btn_product_save
+        properties: {role: outlined-button, text: Save Product Details}
+        type: Button
+      layout_properties: {grid_position: 'WRYZIJ,IGXTAY'}
+      name: column_panel_1
+      properties: {col_widths: '{"JEKQYD":40,"HRRXKE":20,"SRNXZG":40,"SAYLSL":20,"QYGYJY":45,"FCESSR":25}'}
+      type: ColumnPanel
+    layout_properties: {grid_position: 'SNYIPC,TGJHQI'}
+    name: outlined_card_1
+    properties: {col_widths: '{"ZYYYAU":25,"LOTLPK":5,"SLBXUA":5,"OAEZQX":4,"XQMLML":8,"QJHUOW":9,"WRYXCF":6,"PVNRSD":5}', role: outlined-card}
+    type: ColumnPanel
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

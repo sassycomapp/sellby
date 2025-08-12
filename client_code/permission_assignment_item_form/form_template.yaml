@@ -1,0 +1,26 @@
+components:
+- components:
+  - layout_properties: {grid_position: 'KUJXLD,FVKLIX'}
+    name: chk_assign_permission
+    properties: {text: Assign permission}
+    type: CheckBox
+  - layout_properties: {grid_position: 'KUJXLD,OFSLKX'}
+    name: lbl_item_permission_description
+    properties: {text: Permission's description}
+    type: Label
+  - layout_properties: {grid_position: 'KUJXLD,LKMHNK'}
+    name: lbl_item_permission_category
+    properties: {text: Permission's category}
+    type: Label
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

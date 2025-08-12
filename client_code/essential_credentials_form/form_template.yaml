@@ -1,0 +1,149 @@
+components:
+- components:
+  - components:
+    - components:
+      - layout_properties: {grid_position: 'DNWNQL,YGDELM'}
+        name: lbl_paddle_credentials_section
+        properties: {text: Paddle Credentials Section}
+        type: Label
+      - layout_properties: {grid_position: 'XWDNGP,HCMWQH JJZSAQ,NINYDE'}
+        name: lbl_paddle_api_key
+        properties:
+          spacing:
+            margin: ['6', null, null, null]
+          text: Paddle API Key
+        type: Label
+      - layout_properties: {grid_position: 'XWDNGP,HCMWQH KXCAES,DGOBTO'}
+        name: spacer_1
+        properties: {height: 6}
+        type: Spacer
+      - layout_properties: {grid_position: 'XWDNGP,HCMWQH WDDEDQ,AIHUDI'}
+        name: lbl_paddle_webhook_secret
+        properties: {text: Paddle Webhook Secret}
+        type: Label
+      - layout_properties: {grid_position: 'XWDNGP,HCMWQH NPSMWR,GCIKLV'}
+        name: spacer_2
+        properties: {height: 0.666656494140625}
+        type: Spacer
+      - layout_properties: {grid_position: 'XWDNGP,HCMWQH IHFKJM,HHLRGC'}
+        name: lbl_paddle_client_token
+        properties: {text: Paddle Client-Side Token}
+        type: Label
+      - layout_properties: {grid_position: 'XWDNGP,HCMWQH QUWGYE,IUTDZP'}
+        name: spacer_3
+        properties: {height: 0.666656494140625}
+        type: Spacer
+      - layout_properties: {grid_position: 'XWDNGP,HCMWQH UNNLHP,NOFFBU'}
+        name: lbl_paddle_seller_id
+        properties: {text: Paddle Seller ID}
+        type: Label
+      - layout_properties: {grid_position: 'XWDNGP,HCMWQH FEWFNU,ZFEWEC'}
+        name: spacer_4
+        properties: {height: 2.6666259765625}
+        type: Spacer
+      - layout_properties: {grid_position: 'XWDNGP,HCMWQH ATICBA,YCCDCR'}
+        name: lbl_paddle_customer_portal_url
+        properties: {text: Paddle Customer Portal URL}
+        type: Label
+      - layout_properties: {grid_position: 'XWDNGP,NCWFJC CJQUBD,ATCXOG'}
+        name: tb_paddle_api_key
+        properties: {role: outlined, visible: true}
+        type: TextBox
+      - layout_properties: {grid_position: 'XWDNGP,NCWFJC KGATCA,GRGEQF'}
+        name: tb_paddle_webhook_secret
+        properties: {role: outlined, visible: true}
+        type: TextBox
+      - layout_properties: {grid_position: 'XWDNGP,NCWFJC ZAFEPH,BUCVNZ'}
+        name: tb_paddle_client_token
+        properties: {role: outlined, visible: true}
+        type: TextBox
+      - layout_properties: {grid_position: 'XWDNGP,NCWFJC IYTGSK,UNAZQQ'}
+        name: tb_paddle_seller_id
+        properties: {role: outlined}
+        type: TextBox
+      - layout_properties: {grid_position: 'XWDNGP,NCWFJC DFMCEO,ZTAOZL'}
+        name: tb_paddle_customer_portal_url
+        properties: {role: outlined}
+        type: TextBox
+      layout_properties: {grid_position: 'KHBTYX,SILLUC'}
+      name: column_panel_1
+      properties: {}
+      type: ColumnPanel
+    layout_properties: {grid_position: 'QLZYZT,FXJMTP'}
+    name: outlined_card_1
+    properties: {role: outlined-card}
+    type: ColumnPanel
+  - components:
+    - components:
+      - layout_properties: {grid_position: 'XSHOAN,LLGOJP'}
+        name: lbl_r2hub_credentials_section
+        properties: {text: R2Hub Credentials Section}
+        type: Label
+      - layout_properties: {grid_position: 'JXVDYC,PYLBXM'}
+        name: lbl_r2hub_api_endpoint
+        properties: {text: R2Hub API Endpoint URL}
+        type: Label
+      - layout_properties: {grid_position: 'JXVDYC,VAEKDT'}
+        name: tb_r2hub_api_endpoint
+        properties: {role: outlined}
+        type: TextBox
+      - layout_properties: {grid_position: 'VMTELU,LDVOSB'}
+        name: lbl_r2hub_tenant_id
+        properties: {text: R2Hub Tenant ID}
+        type: Label
+      - layout_properties: {grid_position: 'VMTELU,SBAJJB'}
+        name: tb_r2hub_tenant_id
+        properties: {role: outlined}
+        type: TextBox
+      - layout_properties: {grid_position: 'LSHANQ,IURAZB'}
+        name: lbl_r2hub_api_key
+        properties: {text: R2Hub API Key}
+        type: Label
+      - layout_properties: {grid_position: 'LSHANQ,ZMCKPA'}
+        name: tb_r2hub_api_key
+        properties: {role: outlined}
+        type: TextBox
+      layout_properties: {grid_position: 'WLHUIF,TRDNLT'}
+      name: column_panel_2
+      properties: {}
+      type: ColumnPanel
+    layout_properties: {grid_position: 'RKSEFY,WCUBWT'}
+    name: outlined_card_2
+    properties: {role: outlined-card}
+    type: ColumnPanel
+  - layout_properties: {grid_position: 'AGHUNP,BGXJCW'}
+    name: lbl_feedback
+    properties: {text: Success/Error messages}
+    type: Label
+  - event_bindings: {click: btn_cancel_click}
+    layout_properties: {grid_position: 'XWGDMI,YIAIOF'}
+    name: btn_cancel
+    properties: {role: outlined-button, text: Cancel}
+    type: Button
+  - event_bindings: {click: btn_save_credentials_click}
+    layout_properties: {grid_position: 'XWGDMI,HCRFLB'}
+    name: btn_save_credentials
+    properties: {role: outlined-button, text: Save All Credentials}
+    type: Button
+  - event_bindings: {click: btn_close_popup_click}
+    layout_properties: {grid_position: 'XWGDMI,YQGNUD'}
+    name: btn_close_popup
+    properties: {role: outlined-button, text: Close}
+    type: Button
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {col_widths: '{}'}
+  type: ColumnPanel
+- components: []
+  layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+- layout_properties: {slot: title}
+  name: lbl_popup_title
+  properties: {text: Set Essential Credentials}
+  type: Label
+container:
+  properties: {html: '@theme:standard-page.html', visible: true}
+  type: HtmlTemplate
+is_package: true

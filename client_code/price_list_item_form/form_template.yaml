@@ -1,0 +1,47 @@
+components:
+- components:
+  - components:
+    - layout_properties: {grid_position: 'OYGUSU,BEYSHV'}
+      name: lbl_price_item_desc
+      properties: {bold: true, font_size: 16}
+      type: Label
+    - layout_properties: {grid_position: 'OYGUSU,FODMQZ'}
+      name: lbl_price_item_base
+      properties: {}
+      type: Label
+    - layout_properties: {grid_position: 'OYGUSU,VHNUJG'}
+      name: lbl_price_item_type
+      properties: {}
+      type: Label
+    - layout_properties: {grid_position: 'OYGUSU,QRLUIE'}
+      name: lbl_price_item_status
+      properties: {}
+      type: Label
+    - layout_properties: {grid_position: 'OYGUSU,NBETAJ'}
+      name: lbl_price_item_paddle_id
+      properties: {font_size: 10}
+      type: Label
+    - layout_properties: {grid_position: 'OYGUSU,SOACTT'}
+      name: btn_edit_price
+      properties: {icon: 'fa:pencil', role: outlined-button, text: Edit Price}
+      type: Button
+    - layout_properties: {grid_position: 'OYGUSU,YGCASK'}
+      name: btn_archive_price
+      properties: {icon: 'fa:archive', role: outlined-button, text: Archive}
+      type: Button
+    layout_properties: {grid_position: 'VBPLQC,MERYJF'}
+    name: column_panel_1
+    properties: {}
+    type: ColumnPanel
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

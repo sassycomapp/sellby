@@ -1,0 +1,105 @@
+components:
+- components:
+  - event_bindings: {click: btn_load_base_permissions_click}
+    layout_properties: {grid_position: 'DHGWJW,HMQEUU'}
+    name: btn_load_base_permissions
+    properties: {align: right, role: outlined-button, text: Reload Base Permissions Set}
+    type: Button
+  - event_bindings: {click: btn_reset_permissions_click}
+    layout_properties: {grid_position: 'DHGWJW,YMQQFG'}
+    name: btn_reset_permissions
+    properties: {align: center, role: outlined-button, text: Reset Permissions}
+    type: Button
+  - layout_properties: {grid_position: 'DHGWJW,BACMGP'}
+    name: btn_exit
+    properties: {role: outlined-button, text: Exit}
+    type: Button
+  - layout_properties: {grid_position: 'YCIVOF,PWHRUO'}
+    name: tabs_main_rbac
+    properties:
+      tab_titles: [Role Management, Permission Assignment]
+    type: form:dep_l6meudozssm7aq:Tabs
+  - components:
+    - layout_properties: {grid_position: 'VVQWAV,MMABGK'}
+      name: lbl_role_management_title
+      properties:
+        text: |
+          Manage Roles
+      type: Label
+    - layout_properties: {grid_position: 'GHUNXC,ILQQLI'}
+      name: rp_roles
+      properties: {item_template: role_list_item_form}
+      type: RepeatingPanel
+    - layout_properties: {grid_position: 'OSWSGD,XLXYRB'}
+      name: lbl_add_edit_role_title
+      properties: {text: Add/Edit Role Details}
+      type: Label
+    - layout_properties: {grid_position: 'RDDGAH,RZTOFK'}
+      name: tb_role_name
+      properties: {placeholder: Role Name}
+      type: TextBox
+    - layout_properties: {grid_position: 'RDDGAH,QKCHKI'}
+      name: chk_is_system_role
+      properties: {enabled: false, text: System Role (Cannot be deleted by Tenant)}
+      type: CheckBox
+    - layout_properties: {grid_position: 'MCYYQD,BFBDEL'}
+      name: ta_role_description
+      properties: {text: Role Description}
+      type: TextArea
+    - layout_properties: {grid_position: 'BOLUVC,UKFAYF'}
+      name: btn_save_role
+      properties: {role: outlined-button, text: Save Role}
+      type: Button
+    - layout_properties: {grid_position: 'BOLUVC,ZVEUXB'}
+      name: btn_clear_role_form
+      properties: {role: outlined-button, text: Clear/ New}
+      type: Button
+    - layout_properties: {grid_position: 'BOLUVC,EIVNLD'}
+      name: btn_delete_role
+      properties: {role: outlined-button, text: Delete Role, visible: false}
+      type: Button
+    layout_properties: {grid_position: 'VLLZSZ,FUMLIC'}
+    name: cp_role_management
+    properties: {}
+    type: ColumnPanel
+  - components:
+    - layout_properties: {grid_position: 'UYGMRI,ZKTLEB'}
+      name: lbl_permission_assignment_title
+      properties: {text: Assign Permissions to Roles}
+      type: Label
+    - layout_properties: {grid_position: 'KAAZRK,SIREAY'}
+      name: lbl_select_role_for_permissions
+      properties: {text: 'Select Role to Configure:'}
+      type: Label
+    - layout_properties: {grid_position: 'LURBKE,AELDFN'}
+      name: dd_select_role_for_permissions
+      properties: {}
+      type: DropDown
+    - layout_properties: {grid_position: 'NLTULK,YDBBMU'}
+      name: rp_permissions_for_role
+      properties: {item_template: permission_assignment_item_form}
+      type: RepeatingPanel
+    - layout_properties: {grid_position: 'AZEHIG,CJCLQD'}
+      name: btn_save_role_permissions
+      properties: {role: outlined-button, text: Save assignment}
+      type: Button
+    layout_properties: {grid_position: 'YTWMKW,KROIUJ'}
+    name: cp_permission_assignment
+    properties: {}
+    type: ColumnPanel
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+- layout_properties: {slot: title}
+  name: label_1
+  properties: {}
+  type: Label
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

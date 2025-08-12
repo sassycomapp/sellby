@@ -1,0 +1,81 @@
+components:
+- components:
+  - layout_properties: {grid_position: 'XUQKAN,AUVPSN'}
+    name: empty_cart_label
+    properties: {align: center}
+    type: Label
+  - layout_properties: {grid_position: 'GGXMHJ,VFJUNT'}
+    name: outlined_button_1
+    properties: {role: outlined-button, text: Shop Now}
+    type: Button
+  - layout_properties: {grid_position: 'LIDDMT,URNTRE'}
+    name: shop_button
+    properties: {height: 102.5}
+    type: Spacer
+  - components:
+    - layout_properties: {grid_position: 'KUJVUS,HFPLVI WQRRBW,NZOZHH'}
+      name: label_2
+      properties: {text: My Cart}
+      type: Label
+    - layout_properties: {grid_position: 'KUJVUS,HFPLVI QIBUWZ,GSARLT'}
+      name: repeating_panel_1
+      properties: {item_template: cart_item}
+      type: RepeatingPanel
+    - layout_properties: {grid_position: 'KUJVUS,PLETEM IEASYA,MLFIVP'}
+      name: label_3
+      properties: {text: Order Summary}
+      type: Label
+    - components:
+      - layout_properties: {grid_position: 'UNTTAK,WQPQIJ'}
+        name: label_4
+        properties: {text: Subtotal}
+        type: Label
+      - layout_properties: {grid_position: 'UNTTAK,ZEPCLC'}
+        name: subtotal_label
+        properties: {}
+        type: Label
+      - layout_properties: {grid_position: 'JFNFTQ,HQMCIW'}
+        name: label_5
+        properties: {text: Less Discounts}
+        type: Label
+      - layout_properties: {grid_position: 'JFNFTQ,SPQMJN'}
+        name: shipping_label
+        properties: {}
+        type: Label
+      layout_properties: {grid_position: 'KUJVUS,PLETEM XGPYVH,ETQGWC'}
+      name: column_panel_2
+      properties: {}
+      type: ColumnPanel
+    - layout_properties: {grid_position: 'KUJVUS,PLETEM TGUHGF,JWKRHE'}
+      name: label_9
+      properties: {text: Total}
+      type: Label
+    - layout_properties: {grid_position: 'KUJVUS,PLETEM TGUHGF,PBQTAE'}
+      name: total_label
+      properties: {}
+      type: Label
+    - layout_properties: {grid_position: 'KUJVUS,PLETEM BAFOTQ,JISLRE'}
+      name: coupon_box
+      properties: {placeholder: Coupon Code, role: outlined}
+      type: TextBox
+    - event_bindings: {click: checkout_button_click}
+      layout_properties: {grid_position: 'KUJVUS,PLETEM BAFOTQ,UXFWRL'}
+      name: checkout_button
+      properties: {role: outlined-button, text: Checkout}
+      type: Button
+    layout_properties: {grid_position: 'DKJLNM,OXPIHR'}
+    name: column_panel_1
+    properties: {col_widths: '{"HFPLVI":40,"PLETEM":20}'}
+    type: ColumnPanel
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

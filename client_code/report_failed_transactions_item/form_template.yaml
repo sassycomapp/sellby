@@ -1,0 +1,87 @@
+components:
+- components:
+  - layout_properties: {grid_position: 'IKQYVB,MSUCHV'}
+    name: lbl_txn_id
+    properties:
+      spacing:
+        margin: ['0', null, '0', null]
+        padding: ['0', null, '0', null]
+      spacing_above: none
+      spacing_below: none
+      text: Transaction ID
+    type: Label
+  - layout_properties: {grid_position: 'IKQYVB,XPQTFA'}
+    name: lbl_failed_at
+    properties:
+      spacing:
+        margin: ['0', null, '0', null]
+        padding: ['0', null, '0', null]
+      spacing_above: none
+      spacing_below: none
+      text: Failed At
+    type: Label
+  - layout_properties: {grid_position: 'IKQYVB,BFUVDR'}
+    name: lbl_status
+    properties:
+      spacing:
+        margin: ['0', null, '0', null]
+        padding: ['0', null, '0', null]
+      spacing_above: none
+      spacing_below: none
+      text: Status
+    type: Label
+  - layout_properties: {grid_position: 'IKQYVB,GZPYRF'}
+    name: lbl_customer_email
+    properties:
+      spacing:
+        margin: ['0', null, '0', null]
+        padding: ['0', null, '0', null]
+      spacing_above: none
+      spacing_below: none
+      text: Cust. Email
+    type: Label
+  - layout_properties: {grid_position: 'IKQYVB,ZHLROJ'}
+    name: lbl_total
+    properties:
+      spacing:
+        margin: ['0', null, '0', null]
+        padding: ['0', null, '0', null]
+      spacing_above: none
+      spacing_below: none
+      text: Total Amount
+    type: Label
+  - layout_properties: {grid_position: 'IKQYVB,QPAGHJ'}
+    name: lbl_currency
+    properties:
+      spacing:
+        margin: ['0', null, '0', null]
+        padding: ['0', null, '0', null]
+      spacing_above: none
+      spacing_below: none
+      text: Currency
+    type: Label
+  - layout_properties: {grid_position: 'EKJBVD,EESRRY'}
+    name: lbl_failure_reason_paddle
+    properties: {text: Failure Reason - Paddle}
+    type: Label
+  - layout_properties: {grid_position: 'EKJBVD,KEIHBB'}
+    name: lbl_failure_reason_mybizz
+    properties: {text: Interpretation}
+    type: Label
+  layout_properties: {slot: default}
+  name: content_panel
+  properties:
+    spacing:
+      margin: [0, null, 0, null]
+      padding: [0, null, 0, null]
+    spacing_above: none
+    spacing_below: none
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

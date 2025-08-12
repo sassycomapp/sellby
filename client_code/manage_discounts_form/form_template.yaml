@@ -1,0 +1,131 @@
+components:
+- components:
+  - components:
+    - layout_properties: {grid_position: 'XAUBYM,QGEKUS'}
+      name: lbl_edit_mode_title
+      properties: {text: Create New Discount}
+      type: Label
+    - layout_properties: {grid_position: 'MOLWSH,WUPPWY'}
+      name: lbl_sw_create_new
+      properties: {align: right, text: Create New Discount}
+      type: Label
+    - layout_properties: {grid_position: 'MOLWSH,SWQHCL'}
+      name: sw_action_mode
+      properties: {align: center}
+      type: form:dep_l6meudozssm7aq:Switch
+    - layout_properties: {grid_position: 'MOLWSH,KMREEI'}
+      name: lbl_sw_view_existing_discounts
+      properties: {text: View Existing Discounts}
+      type: Label
+    - layout_properties: {grid_position: 'NMDKIA,RTIZFU'}
+      name: dd_load_discount
+      properties: {include_placeholder: true, placeholder: List Discounts}
+      type: DropDown
+    - layout_properties: {grid_position: 'SNRCAB,DSCYOC'}
+      name: dd_target_item
+      properties: {include_placeholder: true, placeholder: Target Items}
+      type: DropDown
+    - layout_properties: {grid_position: 'GXURZD,NJPAJY'}
+      name: tb_discount_name_mybizz
+      properties: {placeholder: Discount Name/Description}
+      type: TextBox
+    - layout_properties: {grid_position: 'AZCRDQ,DZMTBF'}
+      name: tb_discount_code
+      properties: {placeholder: Discount Code}
+      type: TextBox
+    - layout_properties: {grid_position: 'QWWLKP,CJYXIH'}
+      name: dd_discount_status_mybizz
+      properties:
+        include_placeholder: true
+        items: [Active, Archived]
+        placeholder: Discount Status
+      type: DropDown
+    - layout_properties: {grid_position: 'GIYAGZ,BGLWEY'}
+      name: dd_discount_type_paddle
+      properties:
+        include_placeholder: true
+        items: [Percentage, Flat]
+        placeholder: Discount Type
+      type: DropDown
+    - layout_properties: {grid_position: 'MEMPRG,BXBXSS'}
+      name: tb_discount_rate_percent
+      properties: {placeholder: Percentage Amount}
+      type: TextBox
+    - layout_properties: {grid_position: 'PMZAGV,ZGQJMC'}
+      name: tb_discount_amount_flat
+      properties: {placeholder: Flat Rate Amount}
+      type: TextBox
+    - layout_properties: {grid_position: 'ZGMEPP,MXBEEG'}
+      name: dd_discount_currency_flat
+      properties: {include_placeholder: true, placeholder: Discount Currency (Flat Rate)}
+      type: DropDown
+    - layout_properties: {grid_position: 'YWMCNL,WKXXOV'}
+      name: chk_discount_recurring
+      properties: {text: Discount applies to recurring payments of subscriptions}
+      type: CheckBox
+    - layout_properties: {grid_position: 'SFSZWA,ITQXWN'}
+      name: tb_max_recurring_intervals
+      properties: {placeholder: Number of billing intervals the discount applies to (if recurring)}
+      type: TextBox
+    - layout_properties: {grid_position: 'RVABAL,PPYAFT'}
+      name: tb_usage_limit
+      properties: {placeholder: Maximum number of times the discount can be used in total}
+      type: TextBox
+    - layout_properties: {grid_position: 'ULSBLT,ZYPSGX'}
+      name: date_picker_1
+      properties: {pick_time: true, placeholder: Date/time when the discount is no longer valid}
+      type: DatePicker
+    - layout_properties: {grid_position: 'RSAAVD,OBZEAE'}
+      name: ta_custom_data_mybizz
+      properties: {}
+      type: TextArea
+    - layout_properties: {grid_position: 'RVRIKX,XUWNDB'}
+      name: lbl_paddle_discount_id_display
+      properties: {text: To display the Paddle Discount ID}
+      type: Label
+    - layout_properties: {grid_position: 'WFCSPJ,DMIFFS'}
+      name: btn_save_discount
+      properties: {role: outlined-button, text: Save New Discount}
+      type: Button
+    - layout_properties: {grid_position: 'WFCSPJ,QZGGPW'}
+      name: btn_clear_discount_form
+      properties: {role: outlined-button, text: Clear Form}
+      type: Button
+    - layout_properties: {grid_position: 'WFCSPJ,GBMNFH'}
+      name: btn_archive_discount
+      properties: {role: outlined-button, text: Archive Discount}
+      type: Button
+    layout_properties: {grid_position: 'AXIILL,LHKXDN'}
+    name: outlined_card_1
+    properties: {role: outlined-card}
+    type: ColumnPanel
+  - components:
+    - layout_properties: {grid_position: 'ACWMWB,AVVMKB'}
+      name: rp_discounts_list
+      properties: {item_template: report_discount_list_item}
+      type: RepeatingPanel
+    layout_properties: {grid_position: 'KEHPSQ,ISPVTF'}
+    name: outlined_card_2
+    properties: {role: outlined-card}
+    type: ColumnPanel
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+- components:
+  - layout_properties: {}
+    name: btn_home
+    properties: {role: outlined-button, text: Home}
+    type: Button
+  layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+- layout_properties: {slot: title}
+  name: label_1
+  properties: {text: Manage Discounts}
+  type: Label
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

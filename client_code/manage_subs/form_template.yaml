@@ -1,0 +1,197 @@
+components:
+- components:
+  - components:
+    - components:
+      - components:
+        - layout_properties: {grid_position: 'WKCVDR,HKXERH'}
+          name: lbl_group_form_title
+          properties: {text: Manage Subscription Groups & Plans}
+          type: Label
+        - layout_properties: {grid_position: 'WKCVDR,QKQAVI'}
+          name: lbl_update_sw
+          properties: {align: right, text: Update}
+          type: Label
+        - layout_properties: {grid_position: 'WKCVDR,WQGJMQ'}
+          name: sw_group_action
+          properties: {align: center}
+          type: form:dep_l6meudozssm7aq:Switch
+        - layout_properties: {grid_position: 'WKCVDR,HTHQQR'}
+          name: lbl_new_sw
+          properties: {align: left, text: New}
+          type: Label
+        - layout_properties: {grid_position: 'PDTVYY,CEJIEF'}
+          name: dd_group
+          properties: {include_placeholder: true, placeholder: Select Subscription Group to Manage}
+          type: DropDown
+        - layout_properties: {grid_position: 'RKHJMO,BDFGQS'}
+          name: tb_group_name
+          properties: {placeholder: Subscription Group Name}
+          type: TextBox
+        - layout_properties: {grid_position: 'RKHJMO,XHQIGM'}
+          name: lbl_group_number_display
+          properties: {align: center, text: (New Group)}
+          type: Label
+        - layout_properties: {grid_position: 'SRSDVU,ZWRNKS'}
+          name: ta_group_description
+          properties: {}
+          type: TextArea
+        layout_properties: {grid_position: 'ODPQUZ,JEKQYD'}
+        name: outlined_card_2
+        properties: {col_widths: '{"BDFGQS":50,"XHQIGM":10,"HKXERH":45,"QKQAVI":10,"WQGJMQ":10,"HTHQQR":10}', role: outlined-card}
+        type: ColumnPanel
+      - event_bindings: {click: btn_home_click}
+        layout_properties: {grid_position: 'ODPQUZ,HRRXKE BPEHKS,QRIRMP'}
+        name: btn_home
+        properties: {align: full, role: outlined-button, text: Home}
+        type: Button
+      - event_bindings: {click: btn_reset_click}
+        layout_properties: {grid_position: 'ODPQUZ,HRRXKE AZAWUX,KNBHTV'}
+        name: btn_reset
+        properties: {align: full, role: outlined-button, text: Clear & Reset}
+        type: Button
+      - event_bindings: {click: btn_update_page_click}
+        layout_properties: {grid_position: 'ODPQUZ,HRRXKE YFRMEV,RGBDQG'}
+        name: btn_update_page
+        properties: {align: full, role: outlined-button, text: Update Page}
+        type: Button
+      - event_bindings: {click: btn_delete_group_click}
+        layout_properties: {grid_position: 'ODPQUZ,HRRXKE PZBCEO,KUPHFF'}
+        name: btn_delete_group
+        properties: {align: full, role: outlined-button, text: Delete Group}
+        type: Button
+      - layout_properties: {grid_position: 'ODPQUZ,HRRXKE CGZUXF,SOXAZU'}
+        name: btn_group_save
+        properties: {align: full, role: outlined-button, text: Save Group}
+        type: Button
+      - components:
+        - layout_properties: {grid_position: 'OIKJQU,BCMANZ'}
+          name: lbl_group_tax_category_use_case
+          properties: {text: 'What best describes this overall subscription offering?'}
+          type: Label
+        - layout_properties: {grid_position: 'OIKJQU,XPPGVJ'}
+          name: lbl_group_selected_paddle_tax_category
+          properties: {text: Paddle Tax Category, visible: false}
+          type: Label
+        - layout_properties: {grid_position: 'IALVBP,FSRRLO'}
+          name: dd_subs_group_use_case
+          properties:
+            include_placeholder: true
+            items: []
+            placeholder: Select Use Case for Tax Category...
+          type: DropDown
+        layout_properties: {grid_position: 'REJFED,MWMKRP'}
+        name: outlined_card_3
+        properties: {role: outlined-card}
+        type: ColumnPanel
+      - components:
+        - layout_properties: {grid_position: 'EPISBX,RNSHAF'}
+          name: lbl_group_level_tier_names_title
+          properties: {text: 'Descriptive Names for Levels & Tiers in this Group:'}
+          type: Label
+        - layout_properties: {grid_position: 'ABSBXD,EJWNCL'}
+          name: tb_group_level1_name
+          properties: {placeholder: 'Name for Level 1 (e.g., Beginner)'}
+          type: TextBox
+        - layout_properties: {grid_position: 'ABSBXD,OCTCHA'}
+          name: tb_group_tier1_name
+          properties: {placeholder: 'Name for Tier 1 (e.g., Free Access)'}
+          type: TextBox
+        - layout_properties: {grid_position: 'SMDBFH,PEQOVD'}
+          name: tb_group_level2_name
+          properties: {placeholder: 'Name for Level 2 (e.g., Intermediate)'}
+          type: TextBox
+        - layout_properties: {grid_position: 'SMDBFH,BXFFVP'}
+          name: tb_group_tier2_name
+          properties: {placeholder: 'Name for Tier 2 (e.g., Monthly Plan)'}
+          type: TextBox
+        - layout_properties: {grid_position: 'RSZMNM,CTULUW'}
+          name: tb_group_level3_name
+          properties: {placeholder: 'Name for Level 3 (e.g., Advanced)'}
+          type: TextBox
+        - layout_properties: {grid_position: 'RSZMNM,RBFMPX'}
+          name: tb_group_tier3_name
+          properties: {placeholder: 'Name for Tier 3 (e.g., Yearly Plan)'}
+          type: TextBox
+        layout_properties: {grid_position: 'KNWXSA,HKLVLA'}
+        name: outlined_card_4
+        properties: {role: outlined-card}
+        type: ColumnPanel
+      - components:
+        - layout_properties: {grid_position: 'VEXWOC,APNMHO JGXIWO,NSLCNU'}
+          name: lbl_sub_grp_section_title
+          properties: {text: Subscription Group Image}
+          type: Label
+        - layout_properties: {grid_position: 'VEXWOC,APNMHO TRMVOT,FEMRSX'}
+          name: tb_group_image_url
+          properties: {placeholder: Image URL}
+          type: TextBox
+        - layout_properties: {grid_position: 'VEXWOC,APNMHO YQMQPH,UXFGTK'}
+          name: tb_group_img_name
+          properties: {placeholder: Image name, role: outlined}
+          type: TextBox
+        - event_bindings: {change: fl_group_image_change}
+          layout_properties: {grid_position: 'VEXWOC,APNMHO YINHZN,FSYYLH'}
+          name: fl_group_image
+          properties: {text: Upload Image}
+          type: FileLoader
+        - layout_properties: {grid_position: 'VEXWOC,SGCCKT'}
+          name: img_group_preview
+          properties: {height: 202.75}
+          type: Image
+        layout_properties: {grid_position: 'KEDUFT,DNHKCC'}
+        name: outlined_card_6
+        properties: {col_widths: '{"APNMHO":30,"SGCCKT":30,"FEMRSX":60,"NSLCNU":25}', role: outlined-card}
+        type: ColumnPanel
+      - components:
+        - layout_properties: {grid_position: 'FKVAQJ,DMKMQM'}
+          name: lbl_matrix_display
+          properties: {align: left, text: Subscription Group Price Matrix Display}
+          type: Label
+        - layout_properties: {grid_position: 'YKUXYE,CQBSJX'}
+          name: lbl_matrix_group_name
+          properties: {text: 'Plans for: [Group Name]'}
+          type: Label
+        - layout_properties: {grid_position: 'YKUXYE,KZZJXQ'}
+          name: lbl_matrix_group_num
+          properties: {text: 'G#: [Group Number]'}
+          type: Label
+        - layout_properties: {grid_position: 'KADITR,RDXXBK'}
+          name: lbl_tier_column_name
+          properties: {align: center, text: Tier}
+          type: Label
+        - layout_properties: {grid_position: 'KADITR,IVENFB'}
+          name: lbl_l2_column_name
+          properties: {align: left, text: L2 Price}
+          type: Label
+        - layout_properties: {grid_position: 'KADITR,PXDYDH'}
+          name: lbl_l3_column_name
+          properties: {align: left, text: L3 Price}
+          type: Label
+        - layout_properties: {grid_position: 'DIZUSP,EDFRRA UVSLPZ,RZDNZI'}
+          name: rp_subs_matrix
+          properties: {item_template: template_rp_subs_matrix, spacing_above: none, spacing_below: none, visible: true}
+          type: RepeatingPanel
+        layout_properties: {grid_position: 'FWXHXW,IXUTGR'}
+        name: outlined_card_5
+        properties: {col_widths: '{"CQBSJX":35,"KZZJXQ":15,"EDFRRA":40}', role: outlined-card}
+        type: ColumnPanel
+      layout_properties: {grid_position: 'ANCFOS,XDQLVF'}
+      name: column_panel_1
+      properties: {col_widths: '{"JEKQYD":45,"HRRXKE":15}'}
+      type: ColumnPanel
+    layout_properties: {grid_position: 'SNYIPC,TGJHQI'}
+    name: outlined_card_1
+    properties: {col_widths: '{}', role: outlined-card}
+    type: ColumnPanel
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

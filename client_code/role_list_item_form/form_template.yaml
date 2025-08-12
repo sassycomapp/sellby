@@ -1,0 +1,36 @@
+components:
+- components:
+  - layout_properties: {grid_position: 'DXTAIO,QKWVNX'}
+    name: lbl_item_role_name
+    properties: {}
+    type: Label
+  - layout_properties: {grid_position: 'DXTAIO,AFOZRT'}
+    name: lbl_item_is_system
+    properties: {text: System Role, visible: false}
+    type: Label
+  - event_bindings: {click: btn_item_edit_role_click}
+    layout_properties: {grid_position: 'DXTAIO,ZLIONO'}
+    name: btn_item_edit_role
+    properties: {align: full, icon: 'fa:pencil', role: outlined-button, text: Edit}
+    type: Button
+  - layout_properties: {grid_position: 'UYJMDG,RSXSCL'}
+    name: lbl_item_role_description
+    properties: {}
+    type: Label
+  - event_bindings: {click: btn_item_delete_role_click}
+    layout_properties: {grid_position: 'UYJMDG,CQCNRH'}
+    name: btn_item_delete_role
+    properties: {align: full, icon: 'fa:trash-o', role: outlined-button, text: Delete, visible: false}
+    type: Button
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {col_widths: '{"QKWVNX":20,"AFOZRT":25,"ZLIONO":15,"RSXSCL":45,"CQCNRH":15}'}
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

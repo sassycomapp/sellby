@@ -1,0 +1,51 @@
+components:
+- components:
+  - components:
+    - layout_properties: {grid_position: 'VPNRLI,YIWOLJ'}
+      name: lbl_countries_instruction
+      properties: {text: 'Select applicable countries (e.g., US, GB, DE)'}
+      type: Label
+    - layout_properties: {grid_position: 'JDFOHB,QURHOJ'}
+      name: lb_override_countries
+      properties: {}
+      type: form:dep_l6meudozssm7aq:MultiSelectDropDown
+    - layout_properties: {grid_position: 'QNUTGB,YKPWYW'}
+      name: lbl_override_currency_title
+      properties: {text: Override Currency & Amount}
+      type: Label
+    - layout_properties: {grid_position: 'JJCNSO,GMODTT DGEXWR,FEQXUD'}
+      name: dd_override_currency
+      properties: {include_placeholder: true, placeholder: Select Currency}
+      type: DropDown
+    - layout_properties: {grid_position: 'JJCNSO,GMODTT TPVBOK,LDNQKC'}
+      name: btn_cancel_override
+      properties: {icon: 'fa:times', role: outlined-button, text: 'Cancel '}
+      type: Button
+    - layout_properties: {grid_position: 'JJCNSO,VWJIKW DTPVXW,YYWCUO'}
+      name: tb_override_amount
+      properties: {placeholder: 'Amount in Minor Units (e.g., 900 for €9.00)'}
+      type: TextBox
+    - layout_properties: {grid_position: 'JJCNSO,VWJIKW JSXPBZ,TXYUXC'}
+      name: btn_save_override
+      properties: {icon: 'fa:save', role: outlined-button, text: Save Override}
+      type: Button
+    layout_properties: {grid_position: 'DZZROS,VXKVNY'}
+    name: outlined_card_1
+    properties: {role: outlined-card}
+    type: ColumnPanel
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+- layout_properties: {slot: title}
+  name: lbl_override_form_title
+  properties: {text: Add Currency Override}
+  type: Label
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

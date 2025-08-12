@@ -1,0 +1,42 @@
+components:
+- components:
+  - components:
+    - layout_properties: {}
+      name: lbl_key
+      properties: {background: 'theme:Secondary Container'}
+      type: Label
+    - layout_properties: {}
+      name: lbl_value
+      properties: {background: 'theme:Secondary Container'}
+      type: Label
+    - layout_properties: {}
+      name: lbl_scope
+      properties: {background: 'theme:Secondary Container'}
+      type: Label
+    - layout_properties: {}
+      name: lbl_desc
+      properties: {background: 'theme:Secondary Container'}
+      type: Label
+    - event_bindings: {click: btn_delete_click}
+      layout_properties: {}
+      name: btn_delete
+      properties: {role: outlined-button, text: Delete this secret}
+      type: Button
+    layout_properties: {grid_position: 'CIMZXQ,QPVQVQ'}
+    name: flow_panel_1
+    properties:
+      spacing:
+        margin: [0, null, 0, null]
+    type: FlowPanel
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

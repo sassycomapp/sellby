@@ -1,0 +1,162 @@
+components:
+- components:
+  - layout_properties: {full_width_row: true, grid_position: 'XVJSRB,RGIQGN'}
+    name: column_panel_1
+    properties: {}
+    type: ColumnPanel
+  - components:
+    - layout_properties: {full_width_row: true, grid_position: 'RCBMCK,JVIORS'}
+      name: spacer_2
+      properties: {height: 32}
+      type: Spacer
+    - components:
+      - layout_properties: {grid_position: 'UNFBQK,TTBKEM'}
+        name: spacer_3
+        properties: {height: 32}
+        type: Spacer
+      - layout_properties: {grid_position: 'UNFBQK,HBUQQS'}
+        name: label_3
+        properties: {align: center, foreground: 'theme:On Primary', text: OUR STORE}
+        type: Label
+      - layout_properties: {grid_position: 'UNFBQK,BZIMEK'}
+        name: label_6
+        properties: {align: center, foreground: 'theme:On Primary', text: OPENING HOURS}
+        type: Label
+      - layout_properties: {grid_position: 'UNFBQK,NRFKXZ'}
+        name: label_8
+        properties: {foreground: 'theme:On Primary', text: STAY CONNECTED}
+        type: Label
+      - layout_properties: {grid_position: 'VHCHAJ,PTOJDO XFWGGW,PAHNFK'}
+        name: label_2
+        properties: {align: center, foreground: 'theme:On Primary', role: title, text: MyBizz}
+        type: Label
+      - layout_properties: {grid_position: 'VHCHAJ,PTOJDO OJWCFB,FOYTKC'}
+        name: spacer_8
+        properties: {height: 32}
+        type: Spacer
+      - layout_properties: {grid_position: 'VHCHAJ,SKTDPM LMUDVR,HVKWXB'}
+        name: label_4
+        properties:
+          align: center
+          foreground: theme:On Primary
+          text: |
+            129 West 81st Street
+            Apartment 5A
+            New York, NY
+        type: Label
+      - layout_properties: {grid_position: 'VHCHAJ,SKTDPM PPNDLC,KHKIQP'}
+        name: label_5
+        properties:
+          align: center
+          foreground: theme:On Primary
+          text: |-
+            (555) 555-5555
+            info@cupcakesco.com
+        type: Label
+      - layout_properties: {grid_position: 'VHCHAJ,UQORMP'}
+        name: label_7
+        properties:
+          align: center
+          foreground: theme:On Primary
+          text: |
+            Closed Mondays
+            Tue - Thurs: 9am - 5pm
+            Fri - Sun: 9am - 8pm
+        type: Label
+      - components:
+        - layout_properties: {}
+          name: insta_link_2
+          properties: {foreground: 'theme:On Primary', text: Insta}
+          type: Link
+        - layout_properties: {}
+          name: twitter_link_2
+          properties: {foreground: 'theme:On Primary', text: Twit}
+          type: Link
+        - layout_properties: {}
+          name: link_2
+          properties: {foreground: 'theme:On Primary', text: FB}
+          type: Link
+        layout_properties: {grid_position: 'VHCHAJ,MZTWKV'}
+        name: flow_panel_1
+        properties: {}
+        type: FlowPanel
+      - layout_properties: {grid_position: 'BDMLGM,ZRVYFD'}
+        name: spacer_5
+        properties: {height: 32}
+        type: Spacer
+      - layout_properties: {grid_position: 'BDMLGM,CXSDDF'}
+        name: label_9
+        properties: {foreground: 'theme:On Primary', text: 'SUBSCRIBE FOR UPDATES:'}
+        type: Label
+      - layout_properties: {grid_position: 'PBKONK,AUJGLF'}
+        name: spacer_6
+        properties: {height: 32}
+        type: Spacer
+      - layout_properties: {grid_position: 'PBKONK,PPNPQR'}
+        name: subscribe_textbox
+        properties: {background: 'theme:On Primary', foreground: 'theme:Primary', placeholder: Enter your email}
+        type: TextBox
+      - layout_properties: {grid_position: 'PBKONK,YJPNZA'}
+        name: subscribe_button
+        properties: {background: 'theme:On Primary', foreground: 'theme:Primary', text: Submit}
+        type: Button
+      - layout_properties: {grid_position: 'GDTBDQ,ADHAAO'}
+        name: spacer_7
+        properties: {height: 32}
+        type: Spacer
+      layout_properties: {grid_position: 'XEVKWD,EJLDOU'}
+      name: column_panel_2
+      properties: {col_widths: '{"AUJGLF":30,"PPNPQR":20,"YJPNZA":10}'}
+      type: ColumnPanel
+    layout_properties: {full_width_row: true, grid_position: 'EERVBQ,ADYYEE'}
+    name: outlined_card_1
+    properties: {background: 'theme:Primary', role: outlined-card}
+    type: ColumnPanel
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+- components:
+  - layout_properties: {}
+    name: shop_link
+    properties: {text: Shop}
+    type: Link
+  - layout_properties: {}
+    name: home_link
+    properties: {text: Home}
+    type: Link
+  - layout_properties: {}
+    name: about_link
+    properties: {text: About}
+    type: Link
+  - layout_properties: {}
+    name: contact_link
+    properties: {text: Contact}
+    type: Link
+  - layout_properties: {}
+    name: insta_link
+    properties: {text: Insta}
+    type: Link
+  - layout_properties: {}
+    name: link_1
+    properties: {text: FB}
+    type: Link
+  - name: spacer_1
+    properties: {height: 32}
+    type: Spacer
+  - layout_properties: {}
+    name: cart_link
+    properties: {text: View Cart}
+    type: Link
+  layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+- layout_properties: {slot: title}
+  name: label_1
+  properties: {align: center, text: MyBizz}
+  type: Label
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

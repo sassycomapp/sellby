@@ -1,0 +1,52 @@
+components:
+- layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+- components:
+  - layout_properties: {grid_position: 'MBBVQA,UEYMBP'}
+    name: lbl_instructions
+    properties: {text: 'Welcome! To secure this application, please set the Owner Password. This password will be required for critical administrative tasks.'}
+    type: Label
+  - layout_properties: {grid_position: 'XLWZKV,AVVJBN'}
+    name: lbl_password_prompt
+    properties: {text: Owner Password}
+    type: Label
+  - layout_properties: {grid_position: 'JCCBDR,HBEFRO'}
+    name: tb_owner_password
+    properties: {hide_text: true, placeholder: '', visible: true}
+    type: TextBox
+  - layout_properties: {grid_position: 'TBYDZQ,FSFZNJ'}
+    name: lbl_confirm_prompt
+    properties: {text: Confirm Password}
+    type: Label
+  - layout_properties: {grid_position: 'AZZCNN,AJTZFN'}
+    name: tb_confirm_password
+    properties: {}
+    type: TextBox
+  - layout_properties: {grid_position: 'BCFUBY,GPLXJF'}
+    name: lbl_feedback
+    properties: {}
+    type: Label
+  - event_bindings: {click: btn_set_password_click}
+    layout_properties: {grid_position: 'WRAMPZ,GMNSJT'}
+    name: btn_set_password
+    properties: {align: right, role: outlined-button, text: Set Password}
+    type: Button
+  - event_bindings: {click: btn_close_click}
+    layout_properties: {grid_position: 'WRAMPZ,CNRXDZ'}
+    name: btn_close
+    properties: {align: center, role: outlined-button, text: Close, visible: false}
+    type: Button
+  layout_properties: {slot: default}
+  name: outlined_card_1
+  properties: {role: outlined-card}
+  type: ColumnPanel
+- layout_properties: {slot: title}
+  name: lbl_owner_setup
+  properties: {text: Owner Setup}
+  type: Label
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

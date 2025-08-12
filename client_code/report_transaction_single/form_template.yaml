@@ -1,0 +1,89 @@
+components:
+- components:
+  - layout_properties: {grid_position: 'IZDUBM,GZYIJN'}
+    name: lbl_transaction_id
+    properties: {text: ' Transaction ID'}
+    type: Label
+  - layout_properties: {grid_position: 'BMSHHB,FHAVUG'}
+    name: lbl_status
+    properties: {text: Status}
+    type: Label
+  - layout_properties: {grid_position: 'LQDPVR,CMZMUE'}
+    name: lbl_billed_at
+    properties: {text: Billed at}
+    type: Label
+  - layout_properties: {grid_position: 'MNBWUU,UYKXRT'}
+    name: lbl_total
+    properties: {text: Total amount}
+    type: Label
+  - layout_properties: {grid_position: 'GNGHSH,EQYXJW'}
+    name: lbl_currency
+    properties: {text: Currency}
+    type: Label
+  - layout_properties: {grid_position: 'VXZQOD,SPODDZ'}
+    name: lbl_origin
+    properties: {text: Origin}
+    type: Label
+  - layout_properties: {grid_position: 'JOEDNR,TXFLHX'}
+    name: lbl_customer_heading
+    properties: {text: Customer details}
+    type: Label
+  - layout_properties: {grid_position: 'CFPQUP,AMWYRW'}
+    name: lbl_customer_email
+    properties: {text: Customer email}
+    type: Label
+  - layout_properties: {grid_position: 'CVEBUB,CUKRQW'}
+    name: lbl_customer_name
+    properties: {text: Customer name}
+    type: Label
+  - layout_properties: {grid_position: 'IDGAJO,QSDSAJ'}
+    name: lbl_subscription_heading
+    properties: {text: Subscription Details}
+    type: Label
+  - layout_properties: {grid_position: 'FXJBGI,DJNZPX'}
+    name: lbl_subscription_id
+    properties: {text: Subscription ID}
+    type: Label
+  - layout_properties: {grid_position: 'OCXWKP,GIIBGV'}
+    name: lbl_subscription_status
+    properties: {text: Subscription Status}
+    type: Label
+  - layout_properties: {grid_position: 'OOVNYO,JQTPQP'}
+    name: lbl_discount_heading
+    properties: {text: Discount Details}
+    type: Label
+  - layout_properties: {grid_position: 'NSAZMU,WTCHKF'}
+    name: lbl_discount_code
+    properties: {text: Discount Code}
+    type: Label
+  - layout_properties: {grid_position: 'VUTTMC,GXAQCE'}
+    name: lbl_discount_description
+    properties: {text: Discount Discription}
+    type: Label
+  - layout_properties: {grid_position: 'DLAXCX,CLNMVH'}
+    name: rp_transaction_items
+    properties: {item_template: report_transaction_single_item}
+    type: RepeatingPanel
+  - layout_properties: {grid_position: 'TYBIZQ,UQIXWO'}
+    name: btn_close
+    properties:
+      role: outlined-button
+      text: |
+        Close
+    type: Button
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+- layout_properties: {slot: title}
+  name: label_1
+  properties: {text: Transaction Details}
+  type: Label
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

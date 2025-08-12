@@ -1,0 +1,42 @@
+components:
+- components:
+  - layout_properties: {grid_position: 'YMFUES,VJXIBS'}
+    name: lbl_event_id_display
+    properties: {text: event_id}
+    type: Label
+  - layout_properties: {grid_position: 'YMFUES,XNQMQS'}
+    name: lbl_event_type_display
+    properties: {text: event_type}
+    type: Label
+  - layout_properties: {grid_position: 'YMFUES,OLXNVE'}
+    name: lbl_received_at_display
+    properties: {text: received}
+    type: Label
+  - layout_properties: {grid_position: 'YMFUES,VKBPUJ'}
+    name: lbl_mybizz_status_display
+    properties: {text: status}
+    type: Label
+  - layout_properties: {grid_position: 'YMFUES,UDSKBN'}
+    name: lbl_r2hub_forward_status_display
+    properties: {text: r2hub}
+    type: Label
+  - layout_properties: {grid_position: 'YMFUES,NXYCZD'}
+    name: btn_view_payload_from_hub
+    properties: {role: outlined-button, text: View Payload}
+    type: Button
+  - layout_properties: {grid_position: 'YMFUES,ACDPMZ'}
+    name: btn_verify_or_retry_hub_status
+    properties: {role: outlined-button, text: Verify/Retry Hub}
+    type: Button
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

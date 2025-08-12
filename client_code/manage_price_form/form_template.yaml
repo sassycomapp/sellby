@@ -1,0 +1,140 @@
+components:
+- components:
+  - layout_properties: {grid_position: 'QJSGNC,TMYYCA'}
+    name: tb_price_description
+    properties: {placeholder: Price Description}
+    type: TextBox
+  - layout_properties: {grid_position: 'SHQWEM,AABNVS'}
+    name: dd_price_status
+    properties:
+      include_placeholder: true
+      items: [Active, Archived]
+      placeholder: Status
+    type: DropDown
+  - layout_properties: {grid_position: 'SHQWEM,FXGWYX'}
+    name: tb_price_paddle_id
+    properties: {placeholder: Paddle ID}
+    type: TextBox
+  - components:
+    - layout_properties: {grid_position: 'YDDRGC,GARBIF'}
+      name: lbl_base_price_title
+      properties: {text: Base Price}
+      type: Label
+    - layout_properties: {grid_position: 'VWHTSV,OWMIOP'}
+      name: tb_base_price_amount
+      properties: {placeholder: Amount}
+      type: TextBox
+    - layout_properties: {grid_position: 'VWHTSV,REDHEB'}
+      name: dd_base_price_currency
+      properties:
+        include_placeholder: true
+        items: []
+        placeholder: Select Currency Code
+      type: DropDown
+    - layout_properties: {grid_position: 'LKFXKO,VQRPTS'}
+      name: dd_tax_mode
+      properties:
+        include_placeholder: true
+        items: [account_setting, internal, externalvvvvvvvvvvvvvvvvvvvv]
+        placeholder: Tax Mode
+      type: DropDown
+    - layout_properties: {grid_position: 'FCPOUN,CQYQJY'}
+      name: chk_quantity_enabled
+      properties: {text: Allow Customer to Specify Quantity}
+      type: CheckBox
+    - layout_properties: {grid_position: 'KSFYMH,SVLSKA'}
+      name: tb_quantity_min
+      properties: {placeholder: Minimum Quantity}
+      type: TextBox
+    - layout_properties: {grid_position: 'KSFYMH,OXECPN'}
+      name: tb_quantity_max
+      properties: {placeholder: Maximum Quantity}
+      type: TextBox
+    layout_properties: {grid_position: 'AGRKTQ,QTDZFD'}
+    name: outlined_card_1
+    properties: {role: outlined-card}
+    type: ColumnPanel
+  - components:
+    - layout_properties: {grid_position: 'NRUIKA,VLLFQF'}
+      name: lbl_recurring_title
+      properties: {text: Billing Cycle (for Recurring Prices)}
+      type: Label
+    - layout_properties: {grid_position: 'OYLWTN,LXHEWZ'}
+      name: dd_billing_cycle_interval
+      properties:
+        include_placeholder: true
+        items: [Day, Week, Month, Year]
+        placeholder: Interval
+      type: DropDown
+    - layout_properties: {grid_position: 'JALQAS,NXPFLW'}
+      name: a
+      properties: {text: Billing Cycle}
+      type: Label
+    - layout_properties: {grid_position: 'JALQAS,NOZFOU'}
+      name: tb_billing_cycle_frequency
+      properties: {placeholder: Frequency}
+      type: TextBox
+    - layout_properties: {grid_position: 'WBBYAK,PXXDCZ'}
+      name: lbl_trial_title
+      properties: {text: 'Trial Period (Optional, for Recurring)'}
+      type: Label
+    - layout_properties: {grid_position: 'OYONDH,NZZUVA'}
+      name: dd_trial_period_interval
+      properties:
+        include_placeholder: true
+        items: [Day, Week, Month, Year]
+        placeholder: Interval
+      type: DropDown
+    - layout_properties: {grid_position: 'OYONDH,SVLRTT'}
+      name: tb_trial_period_frequency
+      properties: {placeholder: 'Frequency (e.g., 7, 14)'}
+      type: TextBox
+    - layout_properties: {grid_position: 'CSPAHV,GPRHRA'}
+      name: ta_custom_data
+      properties: {text: Custom Data (Enter valid JSON or leave blank)}
+      type: TextArea
+    layout_properties: {grid_position: 'EJHBGO,JAOFRJ'}
+    name: outlined_card_3
+    properties: {role: outlined-card}
+    type: ColumnPanel
+  - components:
+    - layout_properties: {grid_position: 'QEFXHI,KJTQIJ'}
+      name: lbl_overrides_title
+      properties: {text: Currency Overrides}
+      type: Label
+    - layout_properties: {grid_position: 'AYDZOR,BRUHHN'}
+      name: rp_price_overrides
+      properties: {item_template: price_override_item_form}
+      type: RepeatingPanel
+    - layout_properties: {grid_position: 'ANSSFQ,WBVNVY'}
+      name: btn_add_override
+      properties: {icon: 'fa:plus', role: outlined-button, text: Add Currency Override}
+      type: Button
+    - layout_properties: {grid_position: 'ANSSFQ,VWNUAE'}
+      name: btn_cancel_price
+      properties: {role: outlined-button, text: Cancel}
+      type: Button
+    - layout_properties: {grid_position: 'ANSSFQ,KAYGBT'}
+      name: btn_save_price
+      properties: {role: outlined-button, text: Save Price}
+      type: Button
+    layout_properties: {grid_position: 'GXHWNB,OENAXK'}
+    name: outlined_card_4
+    properties: {role: outlined-card}
+    type: ColumnPanel
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+- layout_properties: {slot: title}
+  name: lbl_price_form_title
+  properties: {text: Manage Price Details}
+  type: Label
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

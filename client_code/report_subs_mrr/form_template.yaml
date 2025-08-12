@@ -1,0 +1,59 @@
+components:
+- components:
+  - layout_properties: {grid_position: 'OXSNVU,HYPYYI'}
+    name: lbl_chart_title
+    properties: {text: MRR Trend Chart}
+    type: Label
+  - layout_properties: {grid_position: 'ZHPIKE,JLILQE'}
+    name: plt_mrr_trend
+    properties: {}
+    type: Plot
+  - layout_properties: {grid_position: 'CRWCJD,YDBFMQ'}
+    name: lbl_active_subs
+    properties: {text: Active Subs Summary}
+    type: Label
+  - layout_properties: {grid_position: 'LRSXKK,VTFGRY'}
+    name: lbl_estimated_mrr
+    properties: {text: Est. MRR Summary}
+    type: Label
+  - layout_properties: {grid_position: 'LQNYWO,EONNXH'}
+    name: lbl_new_mrr
+    properties: {text: New MRR Summary}
+    type: Label
+  - layout_properties: {grid_position: 'FSLKVO,AZTKJZ'}
+    name: lbl_churn_mrr
+    properties: {text: Churn MRR Summary}
+    type: Label
+  - layout_properties: {grid_position: 'RBAYUW,ERLHFS'}
+    name: dd_period_type
+    properties:
+      items: [Monthly, Quarterly]
+    type: DropDown
+  - layout_properties: {grid_position: 'DWJGJC,AYIVYA'}
+    name: dd_periods
+    properties:
+      items: ['Last 3 Periods ', 'Last 6 Periods ', '', Last 12 Periods]
+    type: DropDown
+  - layout_properties: {grid_position: 'FLMENY,NWURZZ'}
+    name: btn_refresh
+    properties:
+      role: outlined-button
+      text: |
+        Refresh
+    type: Button
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+- layout_properties: {slot: title}
+  name: lbl_title
+  properties: {text: Subscription Overview & MRR}
+  type: Label
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

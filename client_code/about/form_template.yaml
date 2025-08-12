@@ -1,0 +1,55 @@
+components:
+- components:
+  - components:
+    - layout_properties: {grid_position: 'DYNLCR,QHXUVR'}
+      name: label_8
+      properties: {}
+      type: Label
+    - layout_properties: {grid_position: 'KDVVNN,KTDIQU'}
+      name: label_1
+      properties: {}
+      type: Label
+    - layout_properties: {grid_position: 'KDVVNN,KTDIQU QWHEYF,RINETK'}
+      name: label_2
+      properties: {}
+      type: Label
+    - layout_properties: {grid_position: 'KDVVNN,KTDIQU LUYBIE,EPSOPM'}
+      name: label_3
+      properties: {}
+      type: Label
+    - layout_properties: {grid_position: 'KDVVNN,KTDIQU BPAUKZ,KETZHU'}
+      name: label_4
+      properties: {}
+      type: Label
+    - layout_properties: {grid_position: 'KDVVNN,KTDIQU XXIMSG,DPOESM'}
+      name: label_5
+      properties: {}
+      type: Label
+    - layout_properties: {grid_position: 'KDVVNN,KTDIQU NLOGRX,HZXKCN'}
+      name: label_6
+      properties: {}
+      type: Label
+    - layout_properties: {grid_position: 'KDVVNN,KTDIQU HTKWDQ,VEGXQY'}
+      name: label_7
+      properties: {}
+      type: Label
+    - layout_properties: {grid_position: 'KDVVNN,LWGOOG'}
+      name: image_1
+      properties: {height: 440}
+      type: Image
+    layout_properties: {grid_position: 'VJVXFJ,PZURYR'}
+    name: column_panel_1
+    properties: {}
+    type: ColumnPanel
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true
