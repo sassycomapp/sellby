@@ -1400,7 +1400,7 @@ dependencies:
   resolution_hints: {app_id: C6ZZPAPN4YYF5NVJ, name: Anvil Extras, package_name: anvil_extras}
   version: {version_tag: v3.1.0}
 metadata: {description: Anvil/ Paddle payment gateway plugin, logo_img: 'asset:handshake_FILL0_wght400_GRAD0_opsz48.png', title: paddle-plugin}
-name: Clone of A_mybizz-v1
+name: mybizz
 native_deps: {head_html: ''}
 package_name: paddle_plugin
 renamed: true

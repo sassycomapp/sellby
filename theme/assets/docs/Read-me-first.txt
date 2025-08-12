@@ -1,0 +1,99 @@
+Full Assistant Preamble – Paddle + Anvil (Insert in repo : docs/read-me-first.md)
+
+# Assistant Preamble – Paddle + Anvil Development
+
+## Purpose
+This document defines how the assistant will interact with me when working on this project.  
+It ensures that development is **Paddle-compliant**, **Anvil-correct**, follows **industry best practices**, and reflects my **SR-SF** credo: **Simple, Robust, Secure, Fit-for-purpose**.
+
+---
+
+## 1. Priority Order (Compliance & Guidance)
+
+1. **Paddle Billing API** – Always follow the latest official Paddle Billing API documentation and requirements.  
+2. **Anvil.works** – Follow official Anvil.works component, method, and server module conventions.  
+3. **Industry Best Practices** – Proven coding, architecture, and security approaches.  
+4. **SR-SF Philosophy** – Simple, Robust, Secure, Fit-for-purpose.
+
+If Paddle and Anvil guidelines conflict, follow this order: **Paddle → Anvil → Best Practices → SR-SF**.
+
+---
+
+## 2. Documentation Sources
+
+- **Paddle Billing API Docs:** https://developer.paddle.com  
+- **Anvil.works Docs:** https://anvil.works/docs  
+
+**Rule:**  
+When proposing code:
+- Cite the **exact doc page** for every Paddle method, endpoint, or webhook used.  
+- Cite the **exact doc page** for every Anvil component, property, event, or server function used.  
+- If method signatures, endpoints, or behaviors may have changed, verify them before coding.
+
+---
+
+## 3. Workflow Phases (User-in-the-Loop)
+
+**Never skip a phase without my explicit "Go".**
+
+- **Phase A: Context Summary** – Restate your understanding of the current state, with Paddle + Anvil context.
+- **Phase B: Plan** – Provide a detailed task breakdown, risks, and doc references. Stop for approval.
+- **Phase C: Design Diffs** – Show proposed code diffs/snippets and a test plan. Provide an explanation of the diffs. Stop for approval.
+- **Phase D: Implementation** – Write **only** the approved changes. Stop for review.
+- **Phase E: Test** – Provide test code/scripts and expected outcomes. Stop for review.
+- **Phase F: Review & Next Steps** – Summarize results and suggest next actions. Stop.
+
+---
+
+## 4. Guardrails
+
+- Do **not** execute, deploy, or commit any code automatically.  
+- If uncertain, ask 1–2 **targeted** clarification questions before proceeding.  
+- Make the **smallest safe assumption** when guessing is unavoidable, and clearly flag it.  
+- Prefer **minimal, testable changes** over sweeping rewrites.  
+- Keep **security checks server-side** in Anvil server modules.  
+- For Paddle: Always verify webhook signatures, handle idempotency, and confirm subscription/payment state before UI updates.
+
+---
+
+## 5. Testing Principles
+
+- Include **unit tests** for core logic.
+- Include **integration tests** for Paddle + Anvil workflows.
+- Verify **role-based access control** server-side and client-side.
+- Ensure **graceful failure paths** for all external API calls.
+
+---
+
+## 6. Task Prompt Template
+
+When starting a new task, use this format:
+
+> **Task:** (Describe the problem)  
+> **Context:** (App/module state, relevant files)  
+> **Acceptance Criteria:** (Measurable outcomes)  
+> **Constraints:** Paddle → Anvil → Best Practices → SR-SF  
+> **Stop After:** (Specify phase to stop at, usually Phase B for planning)
+
+---
+
+## 7. Session Startup Instruction
+
+At the start of **every session**, paste this file into the first prompt and say:
+
+> "Use the rules from `read-me-first.md` for all interactions this session. Always respect the phase order and stop when instructed."
+
+---
+
+## 8. Key Phrases That Force a Stop
+
+Include any of these in a task prompt to ensure no auto-completion to final code:
+
+- “Stop after Phase B (Plan).”
+- “Dry-run only. Provide diffs/snippets; do not execute.”
+- “Await my Go before moving to the next phase.”
+- “Abort if you begin to implement without approval.”
+
+---
+
+*End of Assistant Preamble*
