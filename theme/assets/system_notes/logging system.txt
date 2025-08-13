@@ -1,0 +1,94 @@
+Include logging wherever appropriate
+
+Instructions for Implementing Custom Logging in Anvil Code Files
+
+Elements for logging:
+data table (logs)
+client module (cm_logs_helper)
+server module (sm_logs_mod)
+
+
+1. Applying Logging in a Client Code File
+Steps:
+	1. Import the logging module in the client file:
+from ..cm_logs_helper import log
+
+	2. Call the log() function at key points in the code where logging is needed. The function signature is:
+log(level, module, process, message, context=None)
+
+		Ë level: The severity of the log ("DEBUG", "INFO", "WARNING", "ERROR", or "CRITICAL").
+	-Ë module: The name of the current module (usually the file name).
+	-Ë process: The function or process name being logged.
+		Ë message: A short description of the event being logged.
+		Ë context (optional): Additional data (e.g., variables or state information) to include in the log.
+Example Usage in a Client File
+Before:
+def submit_form():
+    name = self.text_box_name.text
+    email = self.text_box_email.text
+    save_data(name, email)
+
+After adding logging:
+from cm_helper_mod import log
+
+def submit_form():
+    name = self.text_box_name.text
+    email = self.text_box_email.text
+    
+    log("INFO", "client_form", "submit_form", "User submitted the form", {"name": name, "email": email})
+    
+    save_data(name, email)
+
+
+
+2. Applying Logging in a Server Code File
+Steps:
+	1. Import the logging function in the server file:
+from sm_logs_mod import log
+
+	2. Insert log() calls at important points in the server functions.
+Example Usage in a Server File
+Before:
+@anvil.server.callable
+def process_payment(user_id, amount):
+    user = app_tables.users.get(id=user_id)
+    if not user:
+        raise ValueError("User not found")
+    
+    charge_user(user, amount)
+    return "Payment successful"
+
+After adding logging:
+from sm_logs_mod import log
+
+@anvil.server.callable
+def process_payment(user_id, amount):
+    log("INFO", "server_payments", "process_payment", f"Processing payment for user {user_id}", {"amount": amount})
+    
+    user = app_tables.users.get(id=user_id)
+    if not user:
+        log("ERROR", "server_payments", "process_payment", "User not found", {"user_id": user_id})
+        raise ValueError("User not found")
+    
+    charge_user(user, amount)
+    
+    log("INFO", "server_payments", "process_payment", "Payment successful", {"user_id": user_id, "amount": amount})
+    
+    return "Payment successful"
+
+
+
+Key Points to Remember
+)" Always use descriptive messages for logs.
+)" Use appropriate log levels:
+	-Ë "DEBUG" for detailed troubleshooting.
+	-Ë "INFO" for normal operations.
+	-Ë "WARNING" for potential issues.
+	-Ë "ERROR" for failures.
+	-Ë "CRITICAL" for severe errors affecting system stability.
+)" Include a context dictionary when relevant to provide more details.
+Following these instructions, you can effectively integrate logging into any Anvil client or server code file.
+
+
+
+
