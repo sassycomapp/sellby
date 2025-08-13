@@ -103,6 +103,7 @@ unique_ids:
     user_admin_row: '1744312638470428374491116.9596'
     vault: '1743157096641340245363853.1597'
   modules:
+    _test_2: MRLURZXNY3FYWQJSCDZ7RN5BNBIFHQYC
     cm_logs_helper: '1743069156663774797526962.773'
   scripts: {}
   server_modules:

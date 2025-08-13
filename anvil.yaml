@@ -662,6 +662,23 @@ db_schema:
       type: string
     server: full
     title: prices
+  processed_webhook_events:
+    client: none
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: event_id
+      type: string
+    - admin_ui: {order: 1, width: 200}
+      name: 'event_type '
+      type: string
+    - admin_ui: {order: 2, width: 200}
+      name: subscription_id
+      type: string
+    - admin_ui: {order: 3, width: 200}
+      name: occurred_at
+      type: datetime
+    server: full
+    title: processed_webhook_events
   refund_items:
     client: none
     columns:
